@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · Peaklip</title>
+  <meta name="description" content="What Peaklip stores, what it doesn't, and your choices.">
+  <meta name="theme-color" content="#0E0E12">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://peaklip.com/privacy.html">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header scrolled">
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="Peaklip home"><img src="assets/logo.svg" alt="" width="30" height="30">Peaklip</a>
+    <nav class="nav-links" aria-label="Main"><a href="./#how">How it works</a><a href="./#features">Features</a><a href="./#faq">FAQ</a></nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="legal">
+    <h1>Privacy</h1>
+    <p class="updated">Last updated: 3 November 2026</p>
+
+    <p>Peaklip is a Windows app that turns your videos into short clips. It's built so that your videos never leave your
+      PC unless <strong>you</strong> choose to post a clip. This page explains exactly what we store and why.</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li><strong>Your videos and clips stay on your PC.</strong> Transcription, AI and rendering run locally. We never receive your footage.</li>
+      <li><strong>Your Peaklip account</strong> stores your name, email address and sign-in details on our server.</li>
+      <li><strong>Your YouTube and Instagram connections</strong> are stored only on your PC, in Windows Credential Manager. We never see them.</li>
+      <li><strong>This website</strong> uses no cookies, no analytics and no trackers.</li>
+    </ul>
+
+    <h2>What our server stores</h2>
+    <p>When you create an account and sign in, our server keeps:</p>
+    <ul>
+      <li>your name and email address;</li>
+      <li>your password as a one-way scrypt hash — never the password itself;</li>
+      <li>email confirmation codes (hashed, valid for 15 minutes) and sign-in sessions (stored only as a hash);</li>
+      <li>a device identifier for the PC you sign in from — a one-way hash, not your Windows ID itself — used to keep sign-ins and free trials fair;</li>
+      <li>records of recent sign-in and code attempts (which can include your IP address), used only to block password guessing and cleared out over time;</li>
+      <li>bug reports you choose to send, with your email so we can follow up.</li>
+    </ul>
+    <p>We use this only to run your account, keep it secure and answer your reports. We don't sell it, rent it or use it for advertising.</p>
+
+    <h2>What stays on your PC</h2>
+    <p>Your imported videos, transcripts, found moments, rendered clips, post text, settings and the logins for the
+      platforms you connect are stored on your own computer. Peaklip's local AI (speech recognition and moment ranking)
+      runs on your PC too.</p>
+
+    <h2>Posting to YouTube and Instagram</h2>
+    <p>When you connect YouTube or Instagram, you sign in on the platform's own page and Peaklip receives an access key
+      that is saved in Windows Credential Manager on your PC. When you post a clip, it is uploaded <strong>directly from
+      your PC</strong> to that platform. Peaklip only uses this access to upload the clips you approve and to show which
+      account is connected — never to read, change or delete anything else. You can disconnect at any time in the app,
+      and revoke access in your <a href="https://myaccount.google.com/permissions" rel="noopener">Google account</a> or
+      Meta settings.</p>
+    <p>Peaklip's use of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p>
+    <p>TikTok isn't connected at all: Peaklip prepares the clip and caption, and you post it yourself on TikTok.</p>
+
+    <h2>Who helps us run it</h2>
+    <ul>
+      <li><strong>Railway</strong> hosts our account server and its database.</li>
+      <li>An <strong>email delivery service</strong> sends your confirmation and password-reset codes.</li>
+      <li><strong>GitHub Pages</strong> hosts this website and may keep standard web-server logs for security.</li>
+    </ul>
+
+    <h2>How long we keep it</h2>
+    <p>Account data is kept while your account exists. Confirmation codes expire after 15 minutes, and sign-in attempt
+      records are cleared out over time. If you ask us to delete your account, we delete your account data and bug reports,
+      except anything we're legally required to keep.</p>
+
+    <h2>Your choices</h2>
+    <p>You can ask to see, correct, export or delete your data, or object to how it's used, by emailing
+      <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>. We'll answer within 30 days. If you're in the EU, the UK
+      or Türkiye, you also have the right to complain to your data-protection authority.</p>
+
+    <h2>Children</h2>
+    <p>Peaklip isn't meant for children under 16, and we don't knowingly create accounts for them.</p>
+
+    <h2>Changes</h2>
+    <p>If this page changes in a way that matters, we'll update the date above and tell you in the app.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy: <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="./" aria-label="Peaklip home"><img src="assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
+    <span>© 2026 Peaklip</span>
+    <nav aria-label="Footer"><a href="privacy.html">Privacy</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+  </div>
+</footer>
+</body>
+</html>
