@@ -138,7 +138,7 @@
   }
 
   /* Credit numbers tick up when they come into view */
-  var nums = $$(".cost .n");
+  var nums = $$(".plan-credits .n");
   if (nums.length && !reduce && "IntersectionObserver" in window) {
     var io2 = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
