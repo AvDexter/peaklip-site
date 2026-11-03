@@ -89,7 +89,7 @@ AR = {
    "لا. توافق أولاً على كل مقطع ونصه. يمكن النشر على YouTube Shorts و Instagram Reels من التطبيق؛ أما TikTok فيجهّز Peaklip كل شيء وتنشره أنت بلصقة واحدة.",
  "What does a credit buy?": "ماذا يشتري الرصيد؟", "One clip. A 15-, 30- or 60-second clip each costs one credit when it's made.": "مقطعاً واحداً. كل مقطع من 15 أو 30 أو 60 ثانية يكلّف رصيداً واحداً عند صنعه.",
  "Where do my videos go?": "أين تذهب فيديوهاتي؟", "Nowhere — they stay on your PC. Your account only stores your name, email and sign-in details.": "لا مكان — تبقى على حاسوبك. حسابك يحفظ اسمك وبريدك وبيانات الدخول فقط.",
- "When can I download it?": "متى يمكنني تنزيله؟", "Soon. The app is in private testing; the download will appear right here when it's ready.": "قريباً. التطبيق في اختبار خاص؛ وسيظهر التنزيل هنا عندما يجهز.",
+ "How do I install it?": "كيف أثبّته؟", "Download the installer and run it. Windows may show a SmartScreen warning because the installer isn't code-signed yet — click “More info”, then “Run anyway”. Peaklip needs 64-bit Windows 10 or 11.": "نزّل ملف التثبيت وشغّله. قد يعرض Windows تحذير SmartScreen لأن ملف التثبيت غير موقّع رقمياً بعد — اضغط «مزيد من المعلومات» ثم «التشغيل على أي حال». يحتاج Peaklip إلى Windows 10 أو 11 بنظام 64 بت.", "Get Peaklip for Windows 10 and 11.": "احصل على Peaklip لـ Windows 10 و 11.", "When can I download it?": "متى يمكنني تنزيله؟", "Soon. The app is in private testing; the download will appear right here when it's ready.": "قريباً. التطبيق في اختبار خاص؛ وسيظهر التنزيل هنا عندما يجهز.",
  "Your best moments, on every feed.": "أفضل لحظاتك، في كل منصة.", "Peaklip is in private testing. The Windows download is coming soon.": "Peaklip في اختبار خاص. تنزيل Windows قريباً.",
 }
 
