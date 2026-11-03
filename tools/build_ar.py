@@ -142,8 +142,10 @@ def localize(html: str, page: str) -> str:
         html = html.replace(tag, tag.replace("peaklip.com/", "peaklip.com/ar/"))
     html = re.sub(r'<a class="lang"[^>]*>.*?</a>\n\s*', "", html)
     switch = f'<a class="lang" href="../{page}" hreflang="en" lang="en">English</a>'
-    html = html.replace('<a class="btn btn-soon btn-sm"', switch + '\n    <a class="btn btn-soon btn-sm"', 1) if 'btn-soon btn-sm' in html else \
-        html.replace('</nav>\n  </div>\n</header>', '</nav>\n    ' + switch + '\n  </div>\n</header>', 1)
+    # Put "English" where the English page has "العربية": right after the main nav, before any header button.
+    html, n = re.subn(r'(</nav>\n)(\s*)', lambda m: f"{m.group(1)}{m.group(2)}{switch}\n{m.group(2)}", html, count=1)
+    if n != 1 or switch not in html:
+        raise SystemExit(f"build_ar: could not place the English switch on {page}")
     return html
 
 
