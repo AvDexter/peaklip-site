@@ -1,0 +1,107 @@
+"""Arabic privacy page (a translation of privacy.html; the English page is the reference)."""
+
+PRIVACY_AR = """<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الخصوصية · Peaklip</title>
+  <meta name="description" content="ما الذي يحفظه Peaklip، وما الذي لا يحفظه، وخياراتك.">
+  <meta name="theme-color" content="#0E0E12">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://peaklip.com/ar/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://peaklip.com/privacy.html">
+  <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/privacy.html">
+  <link rel="stylesheet" href="../assets/style.css?v=5">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header scrolled">
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="الصفحة الرئيسية لـ Peaklip"><img src="../assets/logo.svg" alt="" width="30" height="30">Peaklip</a>
+    <nav class="nav-links" aria-label="الرئيسية"><a href="./#how">كيف يعمل</a><a href="./#features">المزايا</a><a href="./#faq">الأسئلة</a></nav>
+    <a class="lang" href="../privacy.html" hreflang="en" lang="en">English</a>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="legal">
+    <h1>الخصوصية</h1>
+    <p class="updated">آخر تحديث: 3 نوفمبر 2026 · النسخة الإنجليزية هي المرجع عند أي اختلاف.</p>
+
+    <p>Peaklip تطبيق لـ Windows يحوّل فيديوهاتك إلى مقاطع قصيرة. صُمّم بحيث لا تغادر فيديوهاتك حاسوبك إلا إذا
+      اخترت <strong>أنت</strong> نشر مقطع. توضح هذه الصفحة بالضبط ما نحفظه ولماذا.</p>
+
+    <h2>باختصار</h2>
+    <ul>
+      <li><strong>فيديوهاتك ومقاطعك تبقى على حاسوبك.</strong> التفريغ والذكاء الاصطناعي والتصيير تعمل محلياً. لا نستلم لقطاتك أبداً.</li>
+      <li><strong>حسابك في Peaklip</strong> يحفظ اسمك وبريدك الإلكتروني وبيانات الدخول على خادمنا.</li>
+      <li><strong>اتصالاتك بـ YouTube و Instagram</strong> تُحفظ على حاسوبك فقط، في مدير بيانات الاعتماد في Windows. لا نراها أبداً.</li>
+      <li><strong>هذا الموقع</strong> لا يستخدم ملفات تعريف الارتباط ولا أدوات تحليل ولا تتبّع.</li>
+    </ul>
+
+    <h2>ما يحفظه خادمنا</h2>
+    <p>عندما تنشئ حساباً وتسجّل الدخول، يحتفظ خادمنا بما يلي:</p>
+    <ul>
+      <li>اسمك وبريدك الإلكتروني؛</li>
+      <li>كلمة مرورك كبصمة scrypt أحادية الاتجاه — لا كلمة المرور نفسها أبداً؛</li>
+      <li>رموز تأكيد البريد (مُبصَّمة، صالحة 15 دقيقة) وجلسات الدخول (محفوظة كبصمة فقط)؛</li>
+      <li>معرّف لجهاز الحاسوب الذي تسجّل منه — بصمة أحادية الاتجاه، لا معرّف Windows نفسه — لإبقاء الدخول والتجارب المجانية عادلة؛</li>
+      <li>سجلات محاولات الدخول وطلب الرموز الأخيرة (وقد تتضمن عنوان IP)، تُستخدم فقط لمنع تخمين كلمات المرور وتُمسح مع الوقت؛</li>
+      <li>بلاغات المشاكل التي تختار إرسالها، مع بريدك لنتابع معك.</li>
+    </ul>
+    <p>نستخدم هذا فقط لتشغيل حسابك وحمايته والرد على بلاغاتك. لا نبيعه ولا نؤجّره ولا نستخدمه للإعلانات.</p>
+
+    <h2>ما يبقى على حاسوبك</h2>
+    <p>فيديوهاتك المستوردة، والنصوص المفرّغة، واللحظات المكتشفة، والمقاطع المصيَّرة، ونصوص المنشورات، والإعدادات،
+      وبيانات الدخول للمنصات التي تربطها — كلها محفوظة على حاسوبك. والذكاء الاصطناعي المحلي في Peaklip (التعرّف
+      على الكلام وترتيب اللحظات) يعمل على حاسوبك أيضاً.</p>
+
+    <h2>النشر على YouTube و Instagram</h2>
+    <p>عند ربط YouTube أو Instagram، تسجّل الدخول في صفحة المنصة نفسها ويستلم Peaklip مفتاح وصول يُحفظ في مدير
+      بيانات الاعتماد في Windows على حاسوبك. عند نشر مقطع، يُرفع <strong>مباشرة من حاسوبك</strong> إلى تلك المنصة.
+      يستخدم Peaklip هذا الوصول فقط لرفع المقاطع التي توافق عليها ولإظهار الحساب المتصل — ولا يقرأ أو يغيّر أو يحذف
+      أي شيء آخر أبداً. يمكنك قطع الاتصال في أي وقت من التطبيق، وإلغاء الوصول من
+      <a href="https://myaccount.google.com/permissions" rel="noopener">حساب Google</a> أو إعدادات Meta.</p>
+    <p>يلتزم استخدام Peaklip للمعلومات المستلمة من واجهات Google بـ
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">سياسة بيانات المستخدم لخدمات Google API</a>،
+      بما في ذلك متطلبات الاستخدام المحدود.</p>
+    <p>TikTok غير مرتبط إطلاقاً: يجهّز Peaklip المقطع والنص، وتنشره أنت بنفسك على TikTok.</p>
+
+    <h2>من يساعدنا في التشغيل</h2>
+    <ul>
+      <li><strong>Railway</strong> يستضيف خادم الحسابات وقاعدة بياناته.</li>
+      <li><strong>خدمة إرسال بريد</strong> ترسل رموز التأكيد وإعادة تعيين كلمة المرور.</li>
+      <li><strong>GitHub Pages</strong> يستضيف هذا الموقع وقد يحتفظ بسجلات خادم ويب اعتيادية لأغراض الأمان.</li>
+    </ul>
+
+    <h2>مدة الاحتفاظ</h2>
+    <p>تُحفظ بيانات الحساب ما دام الحساب موجوداً. تنتهي رموز التأكيد بعد 15 دقيقة، وتُمسح سجلات محاولات الدخول مع
+      الوقت. إن طلبت حذف حسابك، نحذف بيانات حسابك وبلاغاتك، باستثناء ما يُلزمنا القانون بالاحتفاظ به.</p>
+
+    <h2>خياراتك</h2>
+    <p>يمكنك طلب الاطلاع على بياناتك أو تصحيحها أو تصديرها أو حذفها، أو الاعتراض على طريقة استخدامها، بمراسلة
+      <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>. نرد خلال 30 يوماً. وإن كنت في الاتحاد الأوروبي أو
+      المملكة المتحدة أو تركيا، فلك أيضاً حق تقديم شكوى إلى هيئة حماية البيانات لديك.</p>
+
+    <h2>الأطفال</h2>
+    <p>Peaklip غير مخصص للأطفال دون 16 عاماً، ولا ننشئ لهم حسابات عن علم.</p>
+
+    <h2>التغييرات</h2>
+    <p>إن تغيّرت هذه الصفحة تغييراً مهماً، نحدّث التاريخ أعلاه ونخبرك داخل التطبيق.</p>
+
+    <h2>التواصل</h2>
+    <p>أسئلة حول الخصوصية: <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="./" aria-label="الصفحة الرئيسية لـ Peaklip"><img src="../assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
+    <span>© 2026 Peaklip</span>
+    <nav aria-label="التذييل"><a href="privacy.html">الخصوصية</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+  </div>
+</footer>
+</body>
+</html>
+"""

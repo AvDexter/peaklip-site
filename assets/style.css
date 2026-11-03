@@ -5,6 +5,10 @@
 @font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("fonts/Poppins-Medium.woff2") format("woff2"); }
 @font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url("fonts/Poppins-SemiBold.woff2") format("woff2"); }
 @font-face { font-family: "Poppins"; font-weight: 700; font-display: swap; src: url("fonts/Poppins-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Tajawal"; font-weight: 400; font-display: swap; src: url("fonts/Tajawal-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Tajawal"; font-weight: 500; font-display: swap; src: url("fonts/Tajawal-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Tajawal"; font-weight: 600 700; font-display: swap; src: url("fonts/Tajawal-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Tajawal"; font-weight: 800 900; font-display: swap; src: url("fonts/Tajawal-Black.woff2") format("woff2"); }
 @font-face { font-family: "Montserrat"; font-weight: 900; font-display: swap; src: url("fonts/Montserrat-Black.woff2") format("woff2"); }
 
 :root {
@@ -39,8 +43,9 @@ a { color: inherit; }
 h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
 p { margin: 0; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-.skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: var(--accent-text); padding: 8px 14px; border-radius: 8px; z-index: 10; }
-.skip:focus { left: 16px; }
+.skip { position: absolute; inset-inline-start: 16px; top: -64px; background: var(--accent); color: var(--accent-text); padding: 8px 14px;
+  border-radius: 8px; z-index: 10; transition: top 150ms; }
+.skip:focus { top: 8px; }
 
 .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--space-4); }
 @media (max-width: 600px) { .wrap { padding: 0 var(--space-3); } }
@@ -53,10 +58,10 @@ p { margin: 0; }
 .nav { display: flex; align-items: center; gap: var(--space-4); height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
 .brand img { width: 30px; height: 30px; }
-.nav-links { display: flex; gap: var(--space-4); margin-left: auto; }
+.nav-links { display: flex; gap: var(--space-4); margin-inline-start: auto; }
 .nav-links a { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; transition: color 150ms; }
 .nav-links a:hover { color: var(--text); }
-@media (max-width: 720px) { .nav-links { display: none; } .nav .btn { margin-left: auto; } }
+@media (max-width: 720px) { .nav-links { display: none; } .nav .lang { margin-inline-start: auto; } }
 
 /* ---------- buttons ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 0 20px;
@@ -170,7 +175,7 @@ section { scroll-margin-top: 80px; }
 .final .cta-row { justify-content: center; }
 .site-footer { border-top: 1px solid var(--border); padding: var(--space-5) 0; color: var(--text-3); font-size: 14px; }
 .foot { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); align-items: center; }
-.foot nav { display: flex; gap: var(--space-4); margin-left: auto; }
+.foot nav { display: flex; gap: var(--space-4); margin-inline-start: auto; }
 .foot a { text-decoration: none; color: var(--text-2); }
 .foot a:hover { color: var(--text); }
 
@@ -181,7 +186,7 @@ section { scroll-margin-top: 80px; }
 .legal h2 { font-size: 22px; margin: var(--space-6) 0 var(--space-3); }
 .legal p, .legal li { color: var(--text-2); }
 .legal p + p { margin-top: var(--space-3); }
-.legal ul { padding-left: 20px; margin: var(--space-3) 0 0; display: grid; gap: 8px; }
+.legal ul { padding-inline-start: 20px; margin: var(--space-3) 0 0; display: grid; gap: 8px; }
 .legal strong { color: var(--text); font-weight: 600; }
 .legal a { color: var(--accent); }
 
@@ -286,7 +291,20 @@ section { scroll-margin-top: 80px; }
 .plan .checks { margin-bottom: var(--space-5); flex: 1; }
 .plan-btn { width: 100%; }
 .plan-featured { background: linear-gradient(180deg, #221E10, var(--surface) 55%); box-shadow: inset 0 0 0 1px rgba(255, 201, 74, 0.45); }
-.plan-badge { position: absolute; top: 20px; right: 20px; background: var(--accent); color: var(--accent-text); font-size: 12px;
+.plan-badge { position: absolute; top: 20px; inset-inline-end: 20px; background: var(--accent); color: var(--accent-text); font-size: 12px;
   font-weight: 700; padding: 4px 10px; border-radius: 999px; }
 .plans-note { color: var(--text-3); font-size: 14px; margin-top: var(--space-4); }
 @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 480px; } .plan-desc { min-height: 0; } }
+
+/* ---------- language link + Arabic (right-to-left) ---------- */
+.lang { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; padding: 6px 4px; transition: color 150ms; }
+.lang:hover { color: var(--text); }
+.nav .lang:lang(ar) { font-family: "Tajawal", sans-serif; font-size: 16px; }
+[dir="rtl"] body, [dir="rtl"] .btn { font-family: "Tajawal", "Poppins", "Segoe UI", system-ui, sans-serif; }
+[dir="rtl"] body { font-size: 17px; line-height: 1.75; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 { letter-spacing: 0; line-height: 1.3; font-weight: 800; }
+[dir="rtl"] .hero h1 { font-weight: 900; }
+[dir="rtl"] .caption { font-family: "Tajawal", sans-serif; font-weight: 900; text-transform: none; font-size: 32px; }
+[dir="rtl"] .hook { font-family: "Tajawal", sans-serif; font-size: 14px; }
+[dir="rtl"] .price .amt, [dir="rtl"] .rates .cost { font-family: "Poppins", sans-serif; }
+[dir="rtl"] .faq summary::after { margin-inline-start: 8px; }

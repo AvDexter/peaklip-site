@@ -73,7 +73,9 @@
   if (words.length) {
     if (reduce) { words[1].classList.add("on"); }
     else {
-      var lines = [["No", "way", "he"], ["actually", "landed", "it"], ["let's", "go!", ""]];
+      var lines = document.documentElement.lang === "ar"
+        ? [["لا", "يمكن", "أنه"], ["قفز", "من", "فوق"], ["الجسر!", "يلا", "بينا"]]
+        : [["No", "way", "he"], ["actually", "landed", "it"], ["let's", "go!", ""]];
       var line = 0, i = 0;
       setInterval(function () {
         if (document.hidden) return;
