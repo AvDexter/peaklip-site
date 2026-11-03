@@ -193,3 +193,83 @@ section { scroll-margin-top: 80px; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .caption span { transition: none; }
 }
+
+/* ===================== motion layer ===================== */
+
+/* Hero: soft light that follows the cursor (decorative) */
+.hero { position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -20%; pointer-events: none; z-index: 0;
+  background: radial-gradient(420px circle at var(--mx, 70%) var(--my, 40%), rgba(255, 201, 74, 0.10), transparent 60%);
+  transition: background 120ms linear; }
+.hero > .wrap { position: relative; z-index: 1; }
+
+/* Headline words rise in on load */
+.rise { display: inline-block; opacity: 0; transform: translateY(0.45em); animation: rise 700ms cubic-bezier(.2,.8,.2,1) forwards; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+/* Phone tilts toward the cursor */
+.phone-wrap { perspective: 1100px; }
+.phone { transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transform-style: preserve-3d;
+  transition: transform 200ms ease-out; will-change: transform; }
+
+/* Cards: a glow that follows the cursor across the card edge */
+.glow-card { position: relative; isolation: isolate; }
+.glow-card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: radial-gradient(260px circle at var(--gx, -200px) var(--gy, -200px), rgba(255, 201, 74, 0.55), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity 200ms; }
+.glow-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
+  background: radial-gradient(320px circle at var(--gx, -200px) var(--gy, -200px), rgba(255, 201, 74, 0.06), transparent 60%);
+  opacity: 0; transition: opacity 200ms; }
+.glow-card:hover::after, .glow-card:hover::before { opacity: 1; }
+
+/* Buttons: tactile press */
+.btn:not([aria-disabled="true"]):active { transform: scale(0.97); }
+
+/* Staggered reveals */
+.reveal { transition-delay: calc(var(--i, 0) * 70ms); }
+
+/* ---------- "Finding the peak" scroll story ---------- */
+.peak { position: relative; height: 220vh; }
+.peak-stick { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; }
+.peak-inner { width: 100%; }
+.peak h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: var(--space-3); }
+.peak .sub { color: var(--text-2); font-size: 17px; max-width: 36em; margin-bottom: var(--space-6); }
+.wave-box { position: relative; background: var(--surface); border-radius: 20px; padding: 28px 24px 22px; }
+.wave { position: relative; display: flex; align-items: center; gap: 3px; height: 170px; }
+.wave .bar { flex: 1 1 0; min-width: 2px; border-radius: 3px; background: var(--surface-3); height: var(--h);
+  transition: background-color 180ms, transform 260ms cubic-bezier(.2,.8,.2,1); transform-origin: center; }
+.wave .bar.played { background: #5E5E6E; }
+.wave .bar.hot.played { background: var(--accent); transform: scaleY(1.08); }
+.playhead { position: absolute; top: -6px; bottom: -6px; width: 2px; background: var(--text); border-radius: 2px; left: var(--p, 0%);
+  box-shadow: 0 0 12px rgba(255,255,255,.35); }
+.clip-box { position: absolute; top: -10px; bottom: -10px; left: var(--c0); width: var(--cw); border: 2px solid var(--accent);
+  border-radius: 12px; background: rgba(255, 201, 74, 0.07); opacity: 0; transform: scale(0.96); transition: opacity 300ms, transform 300ms; }
+.clip-box.on { opacity: 1; transform: none; }
+.clip-tag { position: absolute; top: -40px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--accent);
+  color: var(--accent-text); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 8px; }
+.wave-axis { display: flex; justify-content: space-between; color: var(--text-3); font-size: 13px; margin-top: 14px; }
+.peak-steps { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-4); }
+.peak-steps span { background: var(--surface); color: var(--text-3); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 500;
+  transition: background-color 250ms, color 250ms; }
+.peak-steps span.on { background: var(--accent-dim); color: var(--accent); }
+@media (max-width: 700px) { .peak { height: 180vh; } .wave { height: 120px; gap: 2px; } }
+
+/* Credit numbers tick up when they appear */
+.cost .n { font-variant-numeric: tabular-nums; }
+
+/* Smooth FAQ open */
+.faq details p { animation: none; }
+.faq details[open] p { animation: faqIn 260ms ease-out; }
+@keyframes faqIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { opacity: 1; transform: none; animation: none; }
+  .phone { transform: none !important; transition: none; }
+  .hero::before { display: none; }
+  .glow-card::after, .glow-card::before { display: none; }
+  .peak { height: auto; }
+  .peak-stick { position: static; height: auto; padding: var(--space-8) 0 0; }
+  .wave .bar, .clip-box { transition: none; }
+  .faq details[open] p { animation: none; }
+}
