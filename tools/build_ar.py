@@ -22,7 +22,7 @@ AR = {
  "For gaming creators &amp; clippers": "لصنّاع محتوى الألعاب ومحترفي القص",
  "Peaklip turns long streams and videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames the webcam and the gameplay, adds animated captions, and waits for your OK.":
    "يحوّل Peaklip البثوث والفيديوهات الطويلة إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك.",
- "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "See how it works": "شاهد كيف يعمل",
+ "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "3-day free trial · 10 clips": "تجربة مجانية 3 أيام · 10 مقاطع", "Start free trial": "ابدأ التجربة المجانية", "Terms": "الشروط", "Refunds": "الاسترداد", "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Paddle.": "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Paddle المدفوعات.", "See how it works": "شاهد كيف يعمل",
  "Windows 10 &amp; 11 · Transcription and AI run on your PC": "Windows 10 و 11 · التفريغ والذكاء الاصطناعي يعملان على حاسوبك",
  "He jumped off the bridge": "قفز من فوق الجسر",
  # peak story
@@ -136,7 +136,7 @@ def translate_html(html: str, missing: set[str]) -> str:
 def localize(html: str, page: str) -> str:
     html = html.replace('<html lang="en">', '<html lang="ar" dir="rtl">')
     html = html.replace('<div class="wave-box">', '<div class="wave-box" dir="ltr">')   # a timeline runs left to right
-    html = re.sub(r'(href|src)="(?!https?:|mailto:|#|\.\./)(assets/[^"]*|favicon\.svg|privacy\.html)"', r'\1="../\2"', html)
+    html = re.sub(r'(href|src)="(?!https?:|mailto:|#|\.\./)(assets/[^"]*|favicon\.svg)"', r'\1="../\2"', html)
     html = html.replace('href="./"', 'href="./"').replace('href="./#', 'href="./#')
     for tag in (f'<link rel="canonical" href="https://peaklip.com/{page}">', f'<meta property="og:url" content="https://peaklip.com/{page}">'):
         html = html.replace(tag, tag.replace("peaklip.com/", "peaklip.com/ar/"))
@@ -176,6 +176,20 @@ def main() -> None:
     priv = english_switch((ROOT / "privacy.html").read_text(encoding="utf-8"), "privacy.html")
     (ROOT / "privacy.html").write_text(priv, encoding="utf-8")
     (ROOT / "ar" / "privacy.html").write_text(PRIVACY_AR, encoding="utf-8")
+    # Terms and refunds: the English pages get the language switch; the Arabic ones reuse the Arabic privacy
+    # page's frame (header, footer) around their own translated text.
+    from legal_ar import REFUNDS_AR, REFUNDS_AR_DESC, REFUNDS_AR_TITLE, TERMS_AR, TERMS_AR_DESC, TERMS_AR_TITLE
+    frame_head, rest = PRIVACY_AR.split('<main id="main" class="wrap">', 1)
+    frame_tail = rest.split("</main>", 1)[1]
+    for page, title, desc, body in (("terms.html", TERMS_AR_TITLE, TERMS_AR_DESC, TERMS_AR),
+                                    ("refunds.html", REFUNDS_AR_TITLE, REFUNDS_AR_DESC, REFUNDS_AR)):
+        en = english_switch((ROOT / page).read_text(encoding="utf-8"), page)
+        (ROOT / page).write_text(en, encoding="utf-8")
+        h = re.sub(r"<title>.*?</title>", f"<title>{title} · Peaklip</title>", frame_head, count=1)
+        h = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{desc}">', h, count=1)
+        h = h.replace("privacy.html", page)
+        out = h + '<main id="main" class="wrap">\n  <article class="legal">\n' + body + "\n  </article>\n</main>" + frame_tail
+        (ROOT / "ar" / page).write_text(out, encoding="utf-8")
     if missing:
         print("No Arabic for:", *sorted(missing), sep="\n  ")
         sys.exit(1)

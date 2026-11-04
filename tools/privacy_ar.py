@@ -27,7 +27,7 @@ PRIVACY_AR = """<!doctype html>
 <main id="main" class="wrap">
   <article class="legal">
     <h1>الخصوصية</h1>
-    <p class="updated">آخر تحديث: 3 نوفمبر 2026 · النسخة الإنجليزية هي المرجع عند أي اختلاف.</p>
+    <p class="updated">آخر تحديث: 4 نوفمبر 2026 · النسخة الإنجليزية هي المرجع عند أي اختلاف.</p>
 
     <p>Peaklip تطبيق لـ Windows يحوّل فيديوهاتك إلى مقاطع قصيرة. صُمّم بحيث لا تغادر فيديوهاتك حاسوبك إلا إذا
       اخترت <strong>أنت</strong> نشر مقطع. توضح هذه الصفحة بالضبط ما نحفظه ولماذا.</p>
@@ -71,6 +71,7 @@ PRIVACY_AR = """<!doctype html>
     <h2>من يساعدنا في التشغيل</h2>
     <ul>
       <li><strong>Railway</strong> يستضيف خادم الحسابات وقاعدة بياناته.</li>
+      <li><strong>Paddle</strong> يبيع الاشتراكات بصفته موزّعنا والتاجر المسجّل: يتولى الدفع وبيانات بطاقتك والفواتير والضرائب. نتلقى حالة خطتك ودفعك فقط، ولا نرى بطاقتك أبداً.</li>
       <li><strong>خدمة إرسال بريد</strong> ترسل رموز التأكيد وإعادة تعيين كلمة المرور.</li>
       <li><strong>GitHub Pages</strong> يستضيف هذا الموقع وقد يحتفظ بسجلات خادم ويب اعتيادية لأغراض الأمان.</li>
     </ul>
@@ -99,7 +100,7 @@ PRIVACY_AR = """<!doctype html>
   <div class="wrap foot">
     <a class="brand" href="./" aria-label="الصفحة الرئيسية لـ Peaklip"><img src="../assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
     <span>© 2026 Peaklip</span>
-    <nav aria-label="التذييل"><a href="privacy.html">الخصوصية</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+    <nav aria-label="التذييل"><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="refunds.html">الاسترداد</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
   </div>
 </footer>
 </body>
