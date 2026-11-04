@@ -41,6 +41,7 @@
   if (cfg.token.indexOf("test_") === 0) { Paddle.Environment.set("sandbox"); }
   Paddle.Initialize({
     token: cfg.token,
+    checkout: { settings: { allowQuantity: false } },   // one plan per account: no quantity selector
     eventCallback: function (e) {
       if (e.name === "checkout.completed") {
         say("You're all set", "Go back to Peaklip — your plan and credits show up in Settings → Plan & credits within a minute.");
