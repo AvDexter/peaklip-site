@@ -34,7 +34,7 @@ PRIVACY_AR = """<!doctype html>
 
     <h2>باختصار</h2>
     <ul>
-      <li><strong>فيديوهاتك ومقاطعك تبقى على حاسوبك.</strong> التفريغ والذكاء الاصطناعي والتصيير تعمل محلياً. لا نستلم لقطاتك أبداً.</li>
+      <li><strong>فيديوهاتك ومقاطعك تبقى على حاسوبك.</strong> التفريغ واكتشاف اللحظات والتحرير تعمل محلياً. لا نستلم لقطاتك أبداً.</li>
       <li><strong>حسابك في Peaklip</strong> يحفظ اسمك وبريدك الإلكتروني وبيانات الدخول على خادمنا.</li>
       <li><strong>اتصالاتك بـ YouTube و Instagram</strong> تُحفظ على حاسوبك فقط، في مدير بيانات الاعتماد في Windows. لا نراها أبداً.</li>
       <li><strong>هذا الموقع</strong> لا يستخدم ملفات تعريف الارتباط ولا أدوات تحليل ولا تتبّع.</li>
@@ -54,7 +54,7 @@ PRIVACY_AR = """<!doctype html>
 
     <h2>ما يبقى على حاسوبك</h2>
     <p>فيديوهاتك المستوردة، والنصوص المفرّغة، واللحظات المكتشفة، والمقاطع المصيَّرة، ونصوص المنشورات، والإعدادات،
-      وبيانات الدخول للمنصات التي تربطها — كلها محفوظة على حاسوبك. والذكاء الاصطناعي المحلي في Peaklip (التعرّف
+      وبيانات الدخول للمنصات التي تربطها — كلها محفوظة على حاسوبك. والتحليل في Peaklip (التعرّف
       على الكلام وترتيب اللحظات) يعمل على حاسوبك أيضاً.</p>
 
     <h2>النشر على YouTube و Instagram</h2>
@@ -100,7 +100,7 @@ PRIVACY_AR = """<!doctype html>
   <div class="wrap foot">
     <a class="brand" href="./" aria-label="الصفحة الرئيسية لـ Peaklip"><img src="../assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
     <span>© 2026 Peaklip</span>
-    <nav aria-label="التذييل"><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="refunds.html">الاسترداد</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+    <nav aria-label="التذييل"><a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="refunds.html">الاسترداد</a><a href="acceptable-use.html">الاستخدام المقبول</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
   </div>
 </footer>
 </body>

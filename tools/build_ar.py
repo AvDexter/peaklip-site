@@ -11,19 +11,19 @@ ROOT = Path(__file__).resolve().parent.parent
 
 AR = {
  # head / chrome
- "Peaklip — AI clips for gaming creators": "Peaklip — مقاطع بالذكاء الاصطناعي لصنّاع محتوى الألعاب",
- "Peaklip turns long streams and gaming videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames webcam and gameplay, adds animated captions and waits for your OK. Windows app, AI runs on your PC.":
-   "يحوّل Peaklip البثوث الطويلة وفيديوهات الألعاب إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك. تطبيق لـ Windows، والذكاء الاصطناعي يعمل على حاسوبك.",
+ "Peaklip — Shorts, Reels and TikToks from your streams": "Peaklip — Shorts و Reels و TikTok من بثوثك",
+ "Peaklip turns long streams and gaming videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames webcam and gameplay, adds animated captions and waits for your OK. Video editing software for Windows; everything runs on your PC.":
+   "يحوّل Peaklip البثوث الطويلة وفيديوهات الألعاب إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك. برنامج تحرير فيديو لـ Windows، وكل شيء يعمل على حاسوبك.",
  "Find the peak. Post the clip. Long videos in, ready-to-post Shorts, Reels and TikToks out.": "اعثر على الذروة. انشر المقطع. فيديوهات طويلة تدخل، و Shorts و Reels و TikTok جاهزة تخرج.",
  "Skip to content": "تخطَّ إلى المحتوى", "Peaklip home": "الصفحة الرئيسية لـ Peaklip", "Main": "الرئيسية", "Footer": "التذييل",
  "How it works": "كيف يعمل", "Features": "المزايا", "Plans": "الخطط", "FAQ": "الأسئلة", "Download ": "تنزيل ", "Soon": "قريباً",
- "Privacy": "الخصوصية", "© 2026 Peaklip": "© 2026 Peaklip",
+ "Privacy": "الخصوصية", "Acceptable use": "الاستخدام المقبول", "© 2026 Peaklip": "© 2026 Peaklip",
  # hero
  "For gaming creators &amp; clippers": "لصنّاع محتوى الألعاب ومحترفي القص",
  "Peaklip turns long streams and videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames the webcam and the gameplay, adds animated captions, and waits for your OK.":
    "يحوّل Peaklip البثوث والفيديوهات الطويلة إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك.",
  "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "3-day free trial · 10 clips": "تجربة مجانية 3 أيام · 10 مقاطع", "Start free trial": "ابدأ التجربة المجانية", "Terms": "الشروط", "Refunds": "الاسترداد", "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Paddle.": "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Paddle المدفوعات.", "See how it works": "شاهد كيف يعمل",
- "Windows 10 &amp; 11 · Transcription and AI run on your PC": "Windows 10 و 11 · التفريغ والذكاء الاصطناعي يعملان على حاسوبك",
+ "Windows 10 &amp; 11 · Everything runs on your PC": "Windows 10 و 11 · كل شيء يعمل على حاسوبك",
  "He jumped off the bridge": "قفز من فوق الجسر",
  # peak story
  "It listens for the moment.": "يُصغي إلى اللحظة.",
@@ -39,8 +39,8 @@ AR = {
  "Import a file from your PC, or scan a channel you have permission to clip and Peaklip picks its most entertaining video.":
    "استورد ملفاً من حاسوبك، أو امسح قناة لديك إذن بقص مقاطعها ويختار Peaklip أكثر فيديوهاتها متعة.",
  "Find the moments": "اعثر على اللحظات",
- "It transcribes the speech, measures reactions and loudness, and ranks the best moments with AI on your PC.":
-   "يفرّغ الكلام، ويقيس ردود الفعل وارتفاع الصوت، ويرتّب أفضل اللحظات بالذكاء الاصطناعي على حاسوبك.",
+ "It transcribes the speech, measures reactions and loudness, and ranks the best moments automatically, on your PC.":
+   "يفرّغ الكلام، ويقيس ردود الفعل وارتفاع الصوت، ويرتّب أفضل اللحظات تلقائياً على حاسوبك.",
  "Make them yours": "اجعلها بأسلوبك",
  "Pick a caption style, fix words, trim, reframe, add music or your watermark — with a live preview.":
    "اختر نمط الترجمة، صحّح الكلمات، قصّ، أعد التأطير، أضف موسيقى أو علامتك المائية — مع معاينة مباشرة.",
@@ -62,8 +62,8 @@ AR = {
  "Trim, fix caption words, zoom in on big reactions, add your own music under the voice, and your logo or @handle.":
    "قصّ، صحّح كلمات الترجمة، كبّر عند ردود الفعل الكبيرة، أضف موسيقاك تحت الصوت، وشعارك أو @معرّفك.",
  "Private by design": "خصوصية من الأساس",
- "Your videos stay on your PC. Transcription, AI and rendering run locally — we never receive your footage.":
-   "فيديوهاتك تبقى على حاسوبك. التفريغ والذكاء الاصطناعي والتصيير تعمل محلياً — لا نستلم لقطاتك أبداً.",
+ "Your videos stay on your PC. Transcription, moment detection and editing run locally — we never receive your footage.":
+   "فيديوهاتك تبقى على حاسوبك. التفريغ واكتشاف اللحظات والتحرير تعمل محلياً — لا نستلم لقطاتك أبداً.",
  "You approve every post": "أنت توافق على كل منشور",
  "Every clip and its text waits for your OK. Nothing is ever published automatically.": "كل مقطع ونصه ينتظران موافقتك. لا يُنشر شيء تلقائياً أبداً.",
  # plans
@@ -178,11 +178,22 @@ def main() -> None:
     (ROOT / "ar" / "privacy.html").write_text(PRIVACY_AR, encoding="utf-8")
     # Terms and refunds: the English pages get the language switch; the Arabic ones reuse the Arabic privacy
     # page's frame (header, footer) around their own translated text.
-    from legal_ar import REFUNDS_AR, REFUNDS_AR_DESC, REFUNDS_AR_TITLE, TERMS_AR, TERMS_AR_DESC, TERMS_AR_TITLE
+    from legal_ar import (
+        AUP_AR,
+        AUP_AR_DESC,
+        AUP_AR_TITLE,
+        REFUNDS_AR,
+        REFUNDS_AR_DESC,
+        REFUNDS_AR_TITLE,
+        TERMS_AR,
+        TERMS_AR_DESC,
+        TERMS_AR_TITLE,
+    )
     frame_head, rest = PRIVACY_AR.split('<main id="main" class="wrap">', 1)
     frame_tail = rest.split("</main>", 1)[1]
     for page, title, desc, body in (("terms.html", TERMS_AR_TITLE, TERMS_AR_DESC, TERMS_AR),
-                                    ("refunds.html", REFUNDS_AR_TITLE, REFUNDS_AR_DESC, REFUNDS_AR)):
+                                    ("refunds.html", REFUNDS_AR_TITLE, REFUNDS_AR_DESC, REFUNDS_AR),
+                                    ("acceptable-use.html", AUP_AR_TITLE, AUP_AR_DESC, AUP_AR)):
         en = english_switch((ROOT / page).read_text(encoding="utf-8"), page)
         (ROOT / page).write_text(en, encoding="utf-8")
         h = re.sub(r"<title>.*?</title>", f"<title>{title} · Peaklip</title>", frame_head, count=1)
