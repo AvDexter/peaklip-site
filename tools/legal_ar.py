@@ -34,9 +34,9 @@ TERMS_AR = '''    <h1>شروط الخدمة</h1>
     </ul>
 
     <h2>الدفع</h2>
-    <p>تتم عملية الطلب عبر موزّعنا الإلكتروني <strong>Paddle.com</strong>، وهو التاجر المسجّل (Merchant of Record) لجميع طلباتنا.
-      يتولى Paddle استفسارات العملاء والمرتجعات، وتنطبق <a href="https://www.paddle.com/legal/checkout-buyer-terms" rel="noopener">شروط المشتري</a>
-      الخاصة به على مشترياتك. لا يرى Peaklip بيانات بطاقتك ولا يحفظها.</p>
+    <p>يتولى <strong>Creem</strong> ‏(creem.io) المدفوعات بصفته موزّعنا الإلكتروني والتاجر المسجّل (Merchant of Record) لجميع
+      طلباتنا: يدير صفحة الدفع ويحفظ بيانات بطاقتك ويرسل الفواتير ويتولى الضرائب. وتجيب <a href="https://docs.creem.io/for-customers/" rel="noopener">مساعدة
+      العملاء</a> لدى Creem عن أسئلة الرسوم. لا يرى Peaklip بيانات بطاقتك ولا يحفظها.</p>
 
     <h2>الاسترداد</h2>
     <p>راجع <a href="refunds.html">سياسة الاسترداد</a>.</p>
@@ -99,9 +99,9 @@ REFUNDS_AR = '''    <h1>سياسة الاسترداد</h1>
     </ul>
 
     <h2>كيف يُدفع الاسترداد</h2>
-    <p>يتولى Paddle.com المدفوعات بصفته موزّعنا والتاجر المسجّل، ويعالج أي استرداد إلى وسيلة الدفع الأصلية وفق
-      <a href="https://www.paddle.com/legal/checkout-buyer-terms" rel="noopener">شروط المشتري</a> الخاصة به. للسؤال عن أي عملية دفع راسل
-      <a href="mailto:hello@peaklip.com">hello@peaklip.com</a> أو تواصل مع Paddle عبر الرابط في إيصالك.</p>'''
+    <p>يتولى Creem ‏(creem.io) المدفوعات بصفته موزّعنا والتاجر المسجّل، ويعالج أي استرداد إلى وسيلة الدفع الأصلية. للسؤال
+      عن أي عملية دفع راسل <a href="mailto:hello@peaklip.com">hello@peaklip.com</a> أو راجع <a href="https://docs.creem.io/for-customers/" rel="noopener">مساعدة
+      العملاء</a> لدى Creem.</p>'''
 
 
 AUP_AR_TITLE = "سياسة الاستخدام المقبول"
