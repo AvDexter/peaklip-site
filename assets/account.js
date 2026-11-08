@@ -195,6 +195,13 @@
     }).catch(function (e) { btn.disabled = false; say(msg, e.message); });
   }
 
+  // Never work inside another site's frame (someone could overlay it to trick clicks or typing).
+  if (window.top !== window.self) {
+    document.documentElement.style.display = "none";
+    try { window.top.location = window.self.location.href; } catch (e) { /* blocked: stays hidden */ }
+    return;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     $("signin-form").addEventListener("submit", signIn);
     $("signout").addEventListener("click", signOut);

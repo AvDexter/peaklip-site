@@ -58,6 +58,8 @@ PAGE = """<!doctype html>
   <meta name="description" content="{desc}">
   <meta name="theme-color" content="#0E0E12">
   <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://clipfactory-production-e466.up.railway.app; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
   <link rel="icon" href="{base}favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://peaklip.com/{self}">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/account.html">
@@ -82,7 +84,7 @@ PAGE = """<!doctype html>
     @media (max-width: 760px) {{ .account .plans {{ grid-template-columns: 1fr; }} }}
     details.danger summary {{ cursor: pointer; color: #FF7A7A; font-weight: 600; }}
   </style>
-  <script src="{base}assets/account.js?v=1" defer></script>
+  <script src="{base}assets/account.js?v=2" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">{skip}</a>
