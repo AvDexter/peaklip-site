@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0E0E12">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://peaklip.com/privacy.html">
-  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="stylesheet" href="assets/style.css?v=6">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/privacy.html">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/privacy.html">
 </head>
@@ -25,7 +25,7 @@
 <main id="main" class="wrap">
   <article class="legal">
     <h1>Privacy</h1>
-    <p class="updated">Last updated: 4 November 2026</p>
+    <p class="updated">Last updated: 8 November 2026</p>
 
     <p>Peaklip is a Windows app that turns your videos into short clips. It's built so that your videos never leave your
       PC unless <strong>you</strong> choose to post a clip. This page explains exactly what we store and why.</p>
@@ -35,6 +35,7 @@
       <li><strong>Your videos and clips stay on your PC.</strong> Transcription, moment detection and editing run locally. We never receive your footage.</li>
       <li><strong>Your Peaklip account</strong> stores your name, email address and sign-in details on our server.</li>
       <li><strong>Your YouTube and Instagram connections</strong> are stored only on your PC, in Windows Credential Manager. We never see them.</li>
+      <li><strong>Scan</strong> looks up public YouTube video statistics through YouTube API Services; it doesn't use your YouTube account.</li>
       <li><strong>This website</strong> uses no cookies, no analytics and no trackers.</li>
     </ul>
 
@@ -42,6 +43,8 @@
     <p>When you create an account and sign in, our server keeps:</p>
     <ul>
       <li>your name and email address;</li>
+      <li>when you confirmed you're 18 or older and accepted the Terms, and which version of the Terms it was;</li>
+      <li>your plan, credits and credit history (for example “clip made” or “plan renewed”);</li>
       <li>your password as a one-way scrypt hash — never the password itself;</li>
       <li>email confirmation codes (hashed, valid for 15 minutes) and sign-in sessions (stored only as a hash);</li>
       <li>a device identifier for the PC you sign in from — a one-way hash, not your Windows ID itself — used to keep sign-ins and free trials fair;</li>
@@ -67,26 +70,49 @@
       including the Limited Use requirements.</p>
     <p>TikTok isn't connected at all: Peaklip prepares the clip and caption, and you post it yourself on TikTok.</p>
 
+    <h2>Scan and YouTube API Services</h2>
+    <p>When you use Scan, the channel link or @handle you paste is sent to our server, which looks up that channel's
+      public videos and their view, like and comment counts using <strong>YouTube API Services</strong>. Nothing is
+      downloaded, and your YouTube account isn't used. The results are kept in the server's memory for up to an hour,
+      so scanning the same channel again doesn't use YouTube's quota, and are then discarded; we don't save them to
+      our database. We keep a short-lived count of how many scans you ran, to stop overuse. YouTube's own
+      <a href="https://www.youtube.com/t/terms" rel="noopener">Terms of Service</a> apply to Scan, and Google's
+      <a href="https://policies.google.com/privacy" rel="noopener">Privacy Policy</a> explains how Google handles
+      data.</p>
+
+    <h2>Your account page on this website</h2>
+    <p>On <a href="account.html">your account page</a> you sign in with your Peaklip email and password to see your
+      credits and history, buy or cancel a plan, or delete your account. The page talks only to Peaklip's server. The
+      sign-in key is kept in that browser tab's session storage and is gone when you close the tab or sign out — no
+      cookies.</p>
+
     <h2>Who helps us run it</h2>
     <ul>
       <li><strong>Railway</strong> hosts our account server and its database.</li>
       <li><strong>Creem</strong> sells the subscriptions as our reseller (merchant of record): it handles checkout, your card details, invoices and taxes. We receive your plan and payment status, never your card.</li>
       <li>An <strong>email delivery service</strong> sends your confirmation and password-reset codes.</li>
       <li><strong>GitHub Pages</strong> hosts this website and may keep standard web-server logs for security.</li>
+      <li><strong>Google (YouTube API Services)</strong> answers Scan's look-ups of public video statistics.</li>
     </ul>
 
     <h2>How long we keep it</h2>
     <p>Account data is kept while your account exists. Confirmation codes expire after 15 minutes, and sign-in attempt
-      records are cleared out over time. If you ask us to delete your account, we delete your account data and bug reports,
-      except anything we're legally required to keep.</p>
+      records are cleared out over time. When you delete your account (or ask us to), we delete your account data,
+      credit history and bug reports, except anything we're legally required to keep. We keep a short note that the
+      account was deleted (its email and when), and the anonymous device hashes that already used a free trial, so
+      trials stay one per PC. Creem keeps its own payment records as the seller.</p>
 
     <h2>Your choices</h2>
-    <p>You can ask to see, correct, export or delete your data, or object to how it's used, by emailing
+    <p>You can delete your account yourself at any time, in the app (Settings → Plan &amp; credits → Delete account)
+      or on <a href="account.html">your account page</a>. You can also ask to see, correct, export or delete your
+      data, or object to how it's used, by emailing
       <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>. We'll answer within 30 days. If you're in the EU, the UK
       or Türkiye, you also have the right to complain to your data-protection authority.</p>
 
     <h2>Children</h2>
-    <p>Peaklip isn't meant for children under 16, and we don't knowingly create accounts for them.</p>
+    <p>Peaklip is only for people aged 18 or older. Everyone confirms this when creating an account, and we don't
+      knowingly keep accounts for anyone younger. If you think a child has an account, tell us at
+      <a href="mailto:hello@peaklip.com">hello@peaklip.com</a> and we'll delete it.</p>
 
     <h2>Changes</h2>
     <p>If this page changes in a way that matters, we'll update the date above and tell you in the app.</p>
@@ -100,7 +126,7 @@
   <div class="wrap foot">
     <a class="brand" href="./" aria-label="Peaklip home"><img src="assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
     <span>© 2026 Peaklip</span>
-    <nav aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="acceptable-use.html">Acceptable use</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+    <nav aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="acceptable-use.html">Acceptable use</a><a href="account.html">Account</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
   </div>
 </footer>
 </body>

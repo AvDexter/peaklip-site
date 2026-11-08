@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your account · Peaklip</title>
+  <meta name="description" content="Sign in to see your Peaklip credits and usage, buy or cancel a plan, or delete your account.">
+  <meta name="theme-color" content="#0E0E12">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://peaklip.com/account.html">
+  <link rel="alternate" hreflang="en" href="https://peaklip.com/account.html">
+  <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/account.html">
+  <link rel="stylesheet" href="assets/style.css?v=6">
+  <style>
+    .acct-form { display: grid; gap: 12px; max-width: 420px; margin-top: var(--space-4); }
+    .acct-form input { min-height: 46px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: var(--surface-2); color: var(--text); font: inherit; }
+    .acct-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .acct-msg { font-size: 14px; margin-top: var(--space-2); }
+    .acct-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .acct-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+    .acct-stats .big { font-size: 30px; font-weight: 700; color: var(--text); line-height: 1.2; }
+    .acct-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: var(--space-3); }
+    .acct-table { width: 100%; border-collapse: collapse; margin-top: var(--space-3); font-size: 14px; }
+    .acct-table th, .acct-table td { text-align: start; padding: 10px 8px; border-bottom: 1px solid var(--border); color: var(--text-2); }
+    .acct-table th { color: var(--text-3); font-weight: 500; }
+    .table-wrap { overflow-x: auto; }
+    .legal.account { max-width: 980px; }
+    .account .plans { margin-top: var(--space-3); }
+    @media (max-width: 760px) { .account .plans { grid-template-columns: 1fr; } }
+    details.danger summary { cursor: pointer; color: #FF7A7A; font-weight: 600; }
+  </style>
+  <script src="assets/account.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header scrolled">
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="Peaklip home"><img src="assets/logo.svg" alt="" width="30" height="30">Peaklip</a>
+    <nav class="nav-links" aria-label="Main"><a href="./#how">How it works</a><a href="./#features">Features</a><a href="./#faq">FAQ</a></nav>
+    <a class="lang" href="ar/account.html" hreflang="ar" lang="ar">العربية</a>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="legal account" aria-live="polite">
+    <section id="signin">
+      <h1>Your account</h1>
+      <p>Sign in with the email and password you use in the Peaklip app.</p>
+      <form id="signin-form" class="acct-form" novalidate>
+        <input id="email" type="email" autocomplete="email" placeholder="Email" aria-label="Email" required>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password" required>
+        <button id="signin-btn" class="btn btn-primary" type="submit">Sign in</button>
+        <p id="signin-msg" class="acct-msg" hidden></p>
+      </form>
+      <p style="margin-top: var(--space-4)">No account yet? <a href="./">Download Peaklip</a> and create one in the app (that's also where the free trial starts). Forgot your password? Use “Forgot password?” in the app.</p>
+      <p class="updated" style="margin-top: var(--space-3)">Signing in here keeps a sign-in key in this browser tab only, until you close it or sign out. No cookies.</p>
+    </section>
+
+    <section id="account" hidden>
+      <div class="acct-top">
+        <div><h1 id="hello">Your account</h1><p id="who"></p></div>
+        <button id="signout" class="btn btn-quiet btn-sm" type="button">Sign out</button>
+      </div>
+      <div class="acct-stats">
+        <div class="panel"><p class="big" id="credits">…</p><p id="clips"></p></div>
+        <div class="panel"><p>Plan</p><p class="big" id="plan-line" style="font-size: 20px">…</p>
+          <div id="sub-actions" class="acct-actions"></div></div>
+      </div>
+      <p id="acct-msg" class="acct-msg" hidden></p>
+
+      <div id="buy" hidden>
+        <h2>Choose a plan</h2>
+        <div id="plans" class="plans"></div>
+        <p class="updated" style="margin-top: var(--space-3)">The free trial (3 days, 10 clips) starts in the Peaklip app only. Buying here starts the paid plan straight away. Prices in US dollars; taxes are added where required. Payments are handled by Creem — Peaklip never sees your card.</p>
+      </div>
+
+      <h2>Credit history</h2>
+      <div class="table-wrap">
+        <table class="acct-table">
+          <thead><tr><th>Date</th><th>Change</th><th>Balance</th><th>Details</th></tr></thead>
+          <tbody id="history-rows"></tbody>
+        </table>
+      </div>
+      <p id="no-history" hidden>No history yet.</p>
+
+      <h2>Delete my account</h2>
+      <details class="danger">
+        <summary>Delete my account</summary>
+        <p style="margin-top: var(--space-3)">This cancels your subscription straight away (no further charges) and erases your account, credits and history from Peaklip's server. It can't be undone. Videos and clips on your PC aren't touched.</p>
+        <form id="del-form" class="acct-form" novalidate>
+          <input id="del-password" type="password" autocomplete="current-password" placeholder="Your password" aria-label="Your password">
+          <input id="del-confirm" type="text" autocomplete="off" placeholder="Type DELETE to confirm" aria-label="Type DELETE to confirm">
+          <button id="del-btn" class="btn btn-quiet" type="submit" style="color: #FF7A7A">Delete my account for good</button>
+          <p id="del-msg" class="acct-msg" hidden></p>
+        </form>
+      </details>
+    </section>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="./" aria-label="Peaklip home"><img src="assets/logo.svg" alt="" width="24" height="24">Peaklip</a>
+    <span>© 2026 Peaklip</span>
+    <nav aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="acceptable-use.html">Acceptable use</a><a href="account.html">Account</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a></nav>
+  </div>
+</footer>
+</body>
+</html>

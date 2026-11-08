@@ -17,7 +17,7 @@ AR = {
  "Find the peak. Post the clip. Long videos in, ready-to-post Shorts, Reels and TikToks out.": "اعثر على الذروة. انشر المقطع. فيديوهات طويلة تدخل، و Shorts و Reels و TikTok جاهزة تخرج.",
  "Skip to content": "تخطَّ إلى المحتوى", "Peaklip home": "الصفحة الرئيسية لـ Peaklip", "Main": "الرئيسية", "Footer": "التذييل",
  "How it works": "كيف يعمل", "Features": "المزايا", "Plans": "الخطط", "FAQ": "الأسئلة", "Download ": "تنزيل ", "Soon": "قريباً",
- "Privacy": "الخصوصية", "Acceptable use": "الاستخدام المقبول", "© 2026 Peaklip": "© 2026 Peaklip",
+ "Privacy": "الخصوصية", "Account": "حسابي", "Acceptable use": "الاستخدام المقبول", "© 2026 Peaklip": "© 2026 Peaklip",
  # hero
  "For gaming creators &amp; clippers": "لصنّاع محتوى الألعاب ومحترفي القص",
  "Peaklip turns long streams and videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames the webcam and the gameplay, adds animated captions, and waits for your OK.":
