@@ -36,8 +36,8 @@ AR = {
  "From a two-hour stream to clips in minutes": "من بث مدته ساعتان إلى مقاطع في دقائق",
  "Peaklip does the slow part. You keep the final say.": "Peaklip يقوم بالجزء البطيء. والكلمة الأخيرة لك.",
  "Bring a video": "أحضر فيديو",
- "Import a file from your PC, or scan a channel you have permission to clip and Peaklip picks its most entertaining video.":
-   "استورد ملفاً من حاسوبك، أو امسح قناة لديك إذن بقص مقاطعها ويختار Peaklip أكثر فيديوهاتها متعة.",
+ "Import video files from your PC — your own streams, recordings or uploads. Drag and drop, any length.":
+   "استورد ملفات الفيديو من حاسوبك — بثوثك أو تسجيلاتك أو مقاطعك المرفوعة. اسحب وأفلت، بأي طول.",
  "Find the moments": "اعثر على اللحظات",
  "It transcribes the speech, measures reactions and loudness, and ranks the best moments automatically, on your PC.":
    "يفرّغ الكلام، ويقيس ردود الفعل وارتفاع الصوت، ويرتّب أفضل اللحظات تلقائياً على حاسوبك.",
@@ -82,8 +82,8 @@ AR = {
  "It runs on most modern Windows PCs. An NVIDIA graphics card makes transcription and rendering much faster, but it isn't required.":
    "يعمل على معظم حواسيب Windows الحديثة. بطاقة رسوميات NVIDIA تجعل التفريغ والتصيير أسرع بكثير، لكنها ليست شرطاً.",
  "Can I clip anyone's videos?": "هل يمكنني قص فيديوهات أي شخص؟",
- "Only videos you own or have the creator's permission to clip and post. Peaklip asks you to confirm that before it imports anything from YouTube.":
-   "فقط الفيديوهات التي تملكها أو لديك إذن صاحبها بقصّها ونشرها. يطلب منك Peaklip تأكيد ذلك قبل استيراد أي شيء من YouTube.",
+ "Only videos you own or have the creator's permission to clip and post. Peaklip works with video files on your PC and doesn't download anything from YouTube or other sites. To clip your own uploads, download them from YouTube Studio first.":
+   "فقط الفيديوهات التي تملكها أو لديك إذن صاحبها بقصّها ونشرها. يعمل Peaklip على ملفات الفيديو الموجودة على حاسوبك ولا ينزّل أي شيء من YouTube أو مواقع أخرى. لقص مقاطعك المرفوعة، نزّلها أولاً من YouTube Studio.",
  "Does it post automatically?": "هل ينشر تلقائياً؟",
  "No. You approve every clip and its text first. YouTube Shorts and Instagram Reels can be posted from the app; for TikTok, Peaklip gets everything ready and you post it with one paste.":
    "لا. توافق أولاً على كل مقطع ونصه. يمكن النشر على YouTube Shorts و Instagram Reels من التطبيق؛ أما TikTok فيجهّز Peaklip كل شيء وتنشره أنت بلصقة واحدة.",
