@@ -64,7 +64,7 @@ PAGE = """<!doctype html>
   <link rel="canonical" href="https://peaklip.com/{self}">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/account.html">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/account.html">
-  <link rel="stylesheet" href="{base}assets/style.css?v=8">
+  <link rel="stylesheet" href="{base}assets/style.css?v=9">
   <style>
     .acct-form {{ display: grid; gap: 12px; max-width: 420px; margin-top: var(--space-4); }}
     .acct-form input {{ min-height: 46px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--border);
