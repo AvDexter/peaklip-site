@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parent.parent
 AR = {
  # head / chrome
  "Peaklip — Shorts, Reels and TikToks from your streams": "Peaklip — Shorts و Reels و TikTok من بثوثك",
- "Peaklip turns long streams and gaming videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames webcam and gameplay, adds animated captions and waits for your OK. Video editing software for Windows; everything runs on your PC.":
-   "يحوّل Peaklip البثوث الطويلة وفيديوهات الألعاب إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك. برنامج تحرير فيديو لـ Windows، وكل شيء يعمل على حاسوبك.",
+ "Peaklip turns long streams and gaming videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames webcam and gameplay, adds animated captions and waits for your OK. Video editing software for Windows; your videos stay on your PC.":
+   "يحوّل Peaklip البثوث الطويلة وفيديوهات الألعاب إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك. برنامج تحرير فيديو لـ Windows، وفيديوهاتك تبقى على حاسوبك.",
  "Find the peak. Post the clip. Long videos in, ready-to-post Shorts, Reels and TikToks out.": "اعثر على الذروة. انشر المقطع. فيديوهات طويلة تدخل، و Shorts و Reels و TikTok جاهزة تخرج.",
  "Skip to content": "تخطَّ إلى المحتوى", "Peaklip home": "الصفحة الرئيسية لـ Peaklip", "Main": "الرئيسية", "Footer": "التذييل",
  "How it works": "كيف يعمل", "Features": "المزايا", "Plans": "الخطط", "FAQ": "الأسئلة", "Download ": "تنزيل ", "Soon": "قريباً",
@@ -23,7 +23,7 @@ AR = {
  "Peaklip turns long streams and videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames the webcam and the gameplay, adds animated captions, and waits for your OK.":
    "يحوّل Peaklip البثوث والفيديوهات الطويلة إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك.",
  "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "3-day free trial · 10 clips": "تجربة مجانية 3 أيام · 10 مقاطع", "Start free trial": "ابدأ التجربة المجانية", "Terms": "الشروط", "Refunds": "الاسترداد", "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Creem.": "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات.", "See how it works": "شاهد كيف يعمل",
- "Windows 10 &amp; 11 · Everything runs on your PC": "Windows 10 و 11 · كل شيء يعمل على حاسوبك",
+ "Windows 10 &amp; 11 · Your videos stay on your PC": "Windows 10 و 11 · فيديوهاتك تبقى على حاسوبك",
  "He jumped off the bridge": "قفز من فوق الجسر",
  # peak story
  "It listens for the moment.": "يُصغي إلى اللحظة.",
@@ -62,8 +62,8 @@ AR = {
  "Trim, fix caption words, zoom in on big reactions, add your own music under the voice, and your logo or @handle.":
    "قصّ، صحّح كلمات الترجمة، كبّر عند ردود الفعل الكبيرة، أضف موسيقاك تحت الصوت، وشعارك أو @معرّفك.",
  "Private by design": "خصوصية من الأساس",
- "Your videos stay on your PC. Transcription, moment detection and editing run locally — we never receive your footage.":
-   "فيديوهاتك تبقى على حاسوبك. التفريغ واكتشاف اللحظات والتحرير تعمل محلياً — لا نستلم لقطاتك أبداً.",
+ "Your videos stay on your PC. Transcription and editing run locally — we never receive your footage. Smart picks only sends a few small still frames and the words of each candidate moment to be judged, and you can switch it off.":
+   "فيديوهاتك تبقى على حاسوبك. التفريغ والتحرير يعملان محلياً — لا نستلم لقطاتك أبداً. يرسل الاختيار الذكي فقط بضع صور ثابتة صغيرة وكلمات كل لحظة مرشّحة لتقييمها، ويمكنك إيقافه.",
  "You approve every post": "أنت توافق على كل منشور",
  "Every clip and its text waits for your OK. Nothing is ever published automatically.": "كل مقطع ونصه ينتظران موافقتك. لا يُنشر شيء تلقائياً أبداً.",
  # plans
@@ -88,7 +88,7 @@ AR = {
  "No. You approve every clip and its text first. YouTube Shorts and Instagram Reels can be posted from the app; for TikTok, Peaklip gets everything ready and you post it with one paste.":
    "لا. توافق أولاً على كل مقطع ونصه. يمكن النشر على YouTube Shorts و Instagram Reels من التطبيق؛ أما TikTok فيجهّز Peaklip كل شيء وتنشره أنت بلصقة واحدة.",
  "What does a credit buy?": "ماذا يشتري الرصيد؟", "One clip. A 15-, 30- or 60-second clip each costs one credit when it's made.": "مقطعاً واحداً. كل مقطع من 15 أو 30 أو 60 ثانية يكلّف رصيداً واحداً عند صنعه.",
- "Where do my videos go?": "أين تذهب فيديوهاتي؟", "Nowhere — they stay on your PC. Your account only stores your name, email and sign-in details.": "لا مكان — تبقى على حاسوبك. حسابك يحفظ اسمك وبريدك وبيانات الدخول فقط.",
+ "Where do my videos go?": "أين تذهب فيديوهاتي؟", "Nowhere — they stay on your PC. With Smart picks on, a few small still frames and the words said in each candidate moment are sent to be judged; never the video, and nothing is kept. Your account stores your name, email and sign-in details.": "لا مكان — تبقى على حاسوبك. عند تشغيل الاختيار الذكي تُرسَل بضع صور ثابتة صغيرة والكلمات المنطوقة في كل لحظة مرشّحة لتقييمها؛ لا يُرسَل الفيديو أبداً ولا يُحفظ شيء. يحفظ حسابك اسمك وبريدك وبيانات الدخول.",
  "How do I install it?": "كيف أثبّته؟", "Download the installer and run it. Windows may show a SmartScreen warning because the installer isn't code-signed yet — click “More info”, then “Run anyway”. Peaklip needs 64-bit Windows 10 or 11.": "نزّل ملف التثبيت وشغّله. قد يعرض Windows تحذير SmartScreen لأن ملف التثبيت غير موقّع رقمياً بعد — اضغط «مزيد من المعلومات» ثم «التشغيل على أي حال». يحتاج Peaklip إلى Windows 10 أو 11 بنظام 64 بت.", "Get Peaklip for Windows 10 and 11.": "احصل على Peaklip لـ Windows 10 و 11.", "When can I download it?": "متى يمكنني تنزيله؟", "Soon. The app is in private testing; the download will appear right here when it's ready.": "قريباً. التطبيق في اختبار خاص؛ وسيظهر التنزيل هنا عندما يجهز.",
  "Your best moments, on every feed.": "أفضل لحظاتك، في كل منصة.", "Peaklip is in private testing. The Windows download is coming soon.": "Peaklip في اختبار خاص. تنزيل Windows قريباً.",
 }

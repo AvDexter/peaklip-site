@@ -25,7 +25,7 @@
 <main id="main" class="wrap">
   <article class="legal">
     <h1>Privacy</h1>
-    <p class="updated">Last updated: 8 November 2026</p>
+    <p class="updated">Last updated: 9 November 2026</p>
 
     <p>Peaklip is a Windows app that turns your videos into short clips. It's built so that your videos never leave your
       PC unless <strong>you</strong> choose to post a clip. This page explains exactly what we store and why.</p>
@@ -33,6 +33,7 @@
     <h2>The short version</h2>
     <ul>
       <li><strong>Your videos and clips stay on your PC.</strong> Transcription, moment detection and editing run locally. We never receive your footage.</li>
+      <li><strong>Smart picks</strong> (on by default, can be switched off) sends a few small still frames and the words said in each candidate moment to be judged by an AI model. Never the video, and nothing is kept.</li>
       <li><strong>Your Peaklip account</strong> stores your name, email address and sign-in details on our server.</li>
       <li><strong>Your YouTube and Instagram connections</strong> are stored only on your PC, in Windows Credential Manager. We never see them.</li>
       <li><strong>Scan</strong> looks up public YouTube video statistics through YouTube API Services; it doesn't use your YouTube account.</li>
@@ -70,6 +71,15 @@
       including the Limited Use requirements.</p>
     <p>TikTok isn't connected at all: Peaklip prepares the clip and caption, and you post it yourself on TikTok.</p>
 
+    <h2>Smart picks</h2>
+    <p>To find the moments worth clipping, Peaklip first measures your video on your PC. With Smart picks on, it then
+      sends, for each candidate moment (usually 20–30 per video): about six small still frames of the game (512 pixels
+      wide), up to three small close-ups of your webcam, the transcript lines of that moment and two measured numbers.
+      Our server passes them to <strong>Anthropic</strong>'s Claude model, which says whether something happens and
+      where to cut. Neither our server nor Peaklip keeps the frames or text afterwards; Anthropic processes them only
+      to answer and doesn't use them to train its models. We keep a count of how many moments you had judged each day,
+      to stop overuse. You can switch Smart picks off in Settings → Clips; Peaklip then picks moments on your PC only.</p>
+
     <h2>Scan and YouTube API Services</h2>
     <p>When you use Scan, the channel link or @handle you paste is sent to our server, which looks up that channel's
       public videos and their view, like and comment counts using <strong>YouTube API Services</strong>. Nothing is
@@ -93,6 +103,7 @@
       <li>An <strong>email delivery service</strong> sends your confirmation and password-reset codes.</li>
       <li><strong>GitHub Pages</strong> hosts this website and may keep standard web-server logs for security.</li>
       <li><strong>Google (YouTube API Services)</strong> answers Scan's look-ups of public video statistics.</li>
+      <li><strong>Anthropic</strong> runs the AI model behind Smart picks; it receives the small frames and transcript lines described above.</li>
     </ul>
 
     <h2>How long we keep it</h2>
