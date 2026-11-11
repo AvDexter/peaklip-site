@@ -37,7 +37,9 @@
   /* A click on any installer link = the conversion the ads are judged by */
   document.addEventListener("click", function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href*="PeaklipSetup.exe"]') : null;
-    if (a && loaded && window.fbq) window.fbq("track", "Lead", { content_name: "Download for Windows" });
+    // On phones the link opens the email form instead (assets/sendlink.js), which counts its own Lead when sent
+    if (a && loaded && window.fbq && !document.documentElement.classList.contains("is-phone"))
+      window.fbq("track", "Lead", { content_name: "Download for Windows" });
   }, true);
 
   var bar = null;

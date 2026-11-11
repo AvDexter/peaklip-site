@@ -24,6 +24,9 @@ AR = {
    "يحوّل Peaklip البثوث والفيديوهات الطويلة إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك.",
  "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "3-day free trial · 10 clips": "تجربة مجانية 3 أيام · 10 مقاطع", "Start free trial": "ابدأ التجربة المجانية", "Terms": "الشروط", "Refunds": "الاسترداد", "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Creem.": "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات.", "See how it works": "شاهد كيف يعمل",
  "Windows 10 &amp; 11 · Your videos stay on your PC": "Windows 10 و 11 · فيديوهاتك تبقى على حاسوبك",
+ "Windows 10 &amp; 11 · 3-day free trial · Your videos stay on your PC": "Windows 10 و 11 · تجربة مجانية 3 أيام · فيديوهاتك تبقى على حاسوبك",
+ "Peaklip runs on Windows 10 &amp; 11. Get the download link by email and install it on your PC.": "يعمل Peaklip على Windows 10 و 11. احصل على رابط التنزيل بالبريد وثبّته على حاسوبك.",
+ "Your email": "بريدك الإلكتروني", "Email me the link": "أرسل لي الرابط",
  "He jumped off the bridge": "قفز من فوق الجسر",
  # peak story
  "It listens for the moment.": "يُصغي إلى اللحظة.",
@@ -126,7 +129,7 @@ def translate_html(html: str, missing: set[str]) -> str:
         name, val = m.group(1), m.group(2)
         if val in AR:
             return f'{name}="{AR[val]}"'
-        if re.search(r"[A-Za-z]{3}", val) and name in ("aria-label", "content", "alt", "title"):
+        if re.search(r"[A-Za-z]{3}", val) and name in ("aria-label", "content", "alt", "title", "placeholder"):
             if not val.startswith(("http", "#", "width=", "website")):
                 missing.add(val)
         return m.group(0)
@@ -137,7 +140,7 @@ def translate_html(html: str, missing: set[str]) -> str:
     head = re.sub(r'(content)="([^"]*)"', attr, head)
     body = re.sub(r"<script.*?</script>", lambda m: m.group(0).replace("<", "\x00"), body, flags=re.S)
     body = re.sub(r">([^<>]+)<", text_node, body)
-    body = re.sub(r'(aria-label|alt|title)="([^"]*)"', attr, body)
+    body = re.sub(r'(aria-label|alt|title|placeholder)="([^"]*)"', attr, body)
     return (head + body).replace("\x00", "<")
 
 
