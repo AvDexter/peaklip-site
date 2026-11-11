@@ -13,7 +13,8 @@
   <meta property="og:description" content="اعثر على الذروة. انشر المقطع. فيديوهات طويلة تدخل، و Shorts و Reels و TikTok جاهزة تخرج.">
   <meta property="og:url" content="https://peaklip.com/ar/">
   <link rel="preload" href="../assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css?v=9">
+  <link rel="stylesheet" href="../assets/style.css?v=10">
+  <script>/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Macintosh/.test(navigator.userAgent))?document.documentElement.classList.add("is-phone"):0</script>
   <link rel="alternate" hreflang="en" href="https://peaklip.com/">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/">
 </head>
@@ -44,6 +45,14 @@
         <span class="eyebrow">لصنّاع محتوى الألعاب ومحترفي القص</span>
         <h1><span class="rise" style="animation-delay:40ms">اعثر</span> <span class="rise" style="animation-delay:110ms">على</span> <span class="rise" style="animation-delay:180ms">الذروة.</span><br><span class="hl"><span class="rise" style="animation-delay:300ms">انشر</span> <span class="rise" style="animation-delay:370ms">المقطع.</span></span></h1>
         <p class="lead">يحوّل Peaklip البثوث والفيديوهات الطويلة إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك.</p>
+        <form class="send-link" id="send-link" novalidate>
+          <p class="send-link-note">يعمل Peaklip على Windows 10 و 11. احصل على رابط التنزيل بالبريد وثبّته على حاسوبك.</p>
+          <div class="send-link-row">
+            <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="بريدك الإلكتروني" aria-label="بريدك الإلكتروني">
+            <button class="btn btn-primary" type="submit">أرسل لي الرابط</button>
+          </div>
+          <p class="send-link-msg" role="status" aria-live="polite"></p>
+        </form>
         <div class="cta-row" id="download">
           <a class="btn btn-primary" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
@@ -51,7 +60,7 @@
           </a>
           <a class="btn btn-quiet" href="#how">شاهد كيف يعمل</a>
         </div>
-        <p class="fineprint">Windows 10 و 11 · فيديوهاتك تبقى على حاسوبك</p>
+        <p class="fineprint">Windows 10 و 11 · تجربة مجانية 3 أيام · فيديوهاتك تبقى على حاسوبك</p>
       </div>
       <div class="phone-wrap" aria-hidden="true">
         <div class="phone">
@@ -242,6 +251,7 @@
 </footer>
 
 <script src="../assets/site.js?v=6" defer></script>
-<script src="../assets/consent.js?v=1" defer></script>
+<script src="../assets/consent.js?v=2" defer></script>
+<script src="../assets/sendlink.js?v=1" defer></script>
 </body>
 </html>

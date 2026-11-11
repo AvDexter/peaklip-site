@@ -334,3 +334,17 @@ section { scroll-margin-top: 80px; }
 .cookie-bar p { flex: 1 1 280px; margin: 0; font-size: 14px; line-height: 1.5; color: var(--text-2); }
 .cookie-bar a { color: var(--accent); }
 .cookie-actions { display: flex; gap: 10px; }
+
+/* Phones and tablets: Peaklip is a Windows app, so the hero offers the link by email instead of the installer */
+.send-link { display: none; }
+.is-phone .cta-row a[href*="PeaklipSetup.exe"] { display: none; }
+.is-phone .send-link { display: block; margin: var(--space-3) 0 4px; max-width: 460px; }
+.send-link-note { margin: 0 0 12px; color: var(--text-2); font-size: 15px; line-height: 1.5; }
+.send-link-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.send-link-row input { flex: 1 1 200px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--border);
+  background: var(--surface-2, #1A1A20); color: var(--text); font: inherit; font-size: 16px; }
+.send-link-row input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.send-link-row .btn { flex: 1 1 auto; }
+.send-link-msg { margin: 10px 0 0; min-height: 1.4em; font-size: 14px; color: var(--text-2); }
+.send-link-msg.ok { color: var(--accent); }
+.send-link-msg.err { color: #FF8A80; }
