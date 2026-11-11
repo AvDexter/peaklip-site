@@ -12,7 +12,7 @@ PRIVACY_AR = """<!doctype html>
   <link rel="canonical" href="https://peaklip.com/ar/privacy.html">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/privacy.html">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/privacy.html">
-  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <link rel="stylesheet" href="../assets/style.css?v=8">
 </head>
 <body>
 <a class="skip" href="#main">تخطَّ إلى المحتوى</a>

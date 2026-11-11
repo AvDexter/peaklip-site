@@ -158,4 +158,18 @@
     }, { threshold: 0.6 });
     nums.forEach(function (n) { io2.observe(n); });
   }
+
+  /* Plans: Monthly / Yearly */
+  var plansEl = $(".plans"), billBtns = $$(".bill-opt");
+  if (plansEl && billBtns.length) {
+    billBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var bill = b.getAttribute("data-bill");
+        if (plansEl.getAttribute("data-bill") === bill) return;
+        billBtns.forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); });
+        plansEl.setAttribute("data-bill", bill);
+        plansEl.classList.remove("switching"); void plansEl.offsetWidth; plansEl.classList.add("switching");
+      });
+    });
+  }
 })();

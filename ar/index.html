@@ -13,7 +13,7 @@
   <meta property="og:description" content="اعثر على الذروة. انشر المقطع. فيديوهات طويلة تدخل، و Shorts و Reels و TikTok جاهزة تخرج.">
   <meta property="og:url" content="https://peaklip.com/ar/">
   <link rel="preload" href="../assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <link rel="stylesheet" href="../assets/style.css?v=8">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/">
 </head>
@@ -143,45 +143,60 @@
         <h2>خطط بسيطة. رصيد واحد لكل مقطع.</h2>
         <p>كل مقطع يكلّف رصيداً واحداً — 15 أو 30 أو 60 ثانية. اختر الخطة التي تناسب كمية نشرك.</p>
       </div>
-      <div class="plans">
+      <div class="billing reveal">
+        <div class="bill-toggle" role="group" aria-label="فترة الدفع">
+          <button type="button" class="bill-opt" data-bill="month" aria-pressed="true">شهري</button>
+          <button type="button" class="bill-opt" data-bill="year" aria-pressed="false">سنوي<span class="save-chip">وفّر 15%</span></button>
+        </div>
+      </div>
+      <div class="plans" data-bill="month">
         <article class="plan panel reveal glow-card">
           <h3>المبتدئ</h3>
           <p class="plan-desc">للمبتدئين.</p>
-          <p class="price"><span class="amt">$15</span><span class="per">/ شهرياً</span></p>
+          <p class="price"><span class="amt m">$19</span><span class="amt y">$194</span><span class="per m">/ شهرياً</span><span class="per y">/ سنوياً</span></p>
+          <p class="price-sub"><span class="m">تُدفع شهرياً</span><span class="y">حوالي <b>$16.17</b> شهرياً · وفّر 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="120">120</span> رصيد شهرياً</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>حتى 120 مقطعاً شهرياً</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>90 فحصاً بـ Smart picks شهرياً</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>كل المزايا مشمولة</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تتجدد الأرصدة كل شهر</li>
           </ul>
-          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">ابدأ التجربة المجانية</a>
+          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">ابدأ التجربة المجانية</span><span class="y">نزّل Peaklip</span></a>
         </article>
         <article class="plan panel reveal glow-card plan-featured">
-          <span class="plan-badge">موصى بها</span><h3>صانع المحتوى</h3>
+          <span class="plan-badge">الأكثر شيوعاً</span><h3>صانع المحتوى</h3>
           <p class="plan-desc">لصنّاع المحتوى الذين ينشرون كل يوم على كل منصاتهم.</p>
-          <p class="price"><span class="amt">$30</span><span class="per">/ شهرياً</span></p>
+          <p class="price"><span class="amt m">$39</span><span class="amt y">$398</span><span class="per m">/ شهرياً</span><span class="per y">/ سنوياً</span></p>
+          <p class="price-sub"><span class="m">تُدفع شهرياً</span><span class="y">حوالي <b>$33.17</b> شهرياً · وفّر 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="300">300</span> رصيد شهرياً</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>حتى 300 مقطع شهرياً</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>180 فحصاً بـ Smart picks شهرياً</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>كل المزايا مشمولة</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تتجدد الأرصدة كل شهر</li>
           </ul>
-          <a class="btn btn-primary plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">ابدأ التجربة المجانية</a>
+          <a class="btn btn-primary plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">ابدأ التجربة المجانية</span><span class="y">نزّل Peaklip</span></a>
         </article>
         <article class="plan panel reveal glow-card">
           <h3>المحترف</h3>
           <p class="plan-desc">لمحترفي القص والفرق التي تصنع مقاطع بكميات كبيرة.</p>
-          <p class="price"><span class="amt">$60</span><span class="per">/ شهرياً</span></p>
+          <p class="price"><span class="amt m">$69</span><span class="amt y">$704</span><span class="per m">/ شهرياً</span><span class="per y">/ سنوياً</span></p>
+          <p class="price-sub"><span class="m">تُدفع شهرياً</span><span class="y">حوالي <b>$58.67</b> شهرياً · وفّر 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="750">750</span> رصيد شهرياً</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>حتى 750 مقطعاً شهرياً</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>360 فحصاً بـ Smart picks شهرياً</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>كل المزايا مشمولة</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تجربة مجانية 3 أيام · 10 مقاطع</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>تتجدد الأرصدة كل شهر</li>
           </ul>
-          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">ابدأ التجربة المجانية</a>
+          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">ابدأ التجربة المجانية</span><span class="y">نزّل Peaklip</span></a>
         </article>
       </div>
-      <p class="plans-note reveal">ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات. <a href="terms.html">الشروط</a> · <a href="refunds.html">الاسترداد</a></p>
+      <p class="plans-note reveal">ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. تُدفع الخطط السنوية مرة واحدة في السنة، بأقل بنحو 15% من الدفع الشهري، مع تجديد الأرصدة وعمليات فحص Smart picks كل شهر كالمعتاد؛ ولا تتضمن تجربة مجانية. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات. <a href="terms.html">الشروط</a> · <a href="refunds.html">الاسترداد</a></p>
     </div>
   </section>
 
@@ -226,6 +241,6 @@
   </div>
 </footer>
 
-<script src="../assets/site.js?v=5" defer></script>
+<script src="../assets/site.js?v=6" defer></script>
 </body>
 </html>

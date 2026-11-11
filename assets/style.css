@@ -308,3 +308,22 @@ section { scroll-margin-top: 80px; }
 [dir="rtl"] .hook { font-family: "Tajawal", sans-serif; font-size: 14px; }
 [dir="rtl"] .price .amt, [dir="rtl"] .rates .cost { font-family: "Poppins", sans-serif; }
 [dir="rtl"] .faq summary::after { margin-inline-start: 8px; }
+
+/* ---------- monthly / yearly (11 Nov 2026) ---------- */
+.billing { display: flex; justify-content: center; margin: 0 0 var(--space-4); }
+.bill-toggle { display: inline-flex; gap: 4px; padding: 5px; background: var(--surface); border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 999px; }
+.bill-opt { font: inherit; font-weight: 600; font-size: 15px; color: var(--text-2, #B6B6C2); background: transparent; border: 0; border-radius: 999px; padding: 9px 20px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: background .2s ease, color .2s ease; }
+.bill-opt:hover { color: var(--text); }
+.bill-opt[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+.bill-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.save-chip { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: rgba(61, 214, 140, 0.16); color: #3DD68C; }
+.bill-opt[aria-pressed="true"] .save-chip { background: rgba(30, 22, 0, 0.14); color: var(--accent-text); }
+.plans[data-bill="month"] .y, .plans[data-bill="year"] .m { display: none !important; }
+.price-sub { color: var(--text-3); font-size: 14px; margin: 0 0 var(--space-3); min-height: 1.5em; }
+.plans[data-bill="year"] .price-sub { color: #3DD68C; }
+.price-sub b { color: inherit; }
+.plans .amt { animation: none; }
+.plans.switching .price .amt, .plans.switching .price-sub { animation: price-in .35s ease both; }
+@keyframes price-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .plans.switching .price .amt, .plans.switching .price-sub { animation: none; } }
+@media (max-width: 480px) { .bill-opt { padding: 8px 14px; font-size: 14px; } }

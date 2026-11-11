@@ -71,6 +71,14 @@ AR = {
  "Every clip costs one credit — 15, 30 or 60 seconds. Pick the plan that matches how much you post.":
    "كل مقطع يكلّف رصيداً واحداً — 15 أو 30 أو 60 ثانية. اختر الخطة التي تناسب كمية نشرك.",
  "Starter": "المبتدئ", "Creator": "صانع المحتوى", "Pro": "المحترف", "Recommended": "موصى بها",
+ # monthly / yearly (11 Nov 2026)
+ "Monthly": "شهري", "Yearly": "سنوي", "Save 15%": "وفّر 15%", "Billing period": "فترة الدفع", "Most popular": "الأكثر شيوعاً",
+ "/ year": "/ سنوياً", "Billed monthly": "تُدفع شهرياً", "About ": "حوالي ", " a month · save 15%": " شهرياً · وفّر 15%",
+ "Credits refill every month": "تتجدد الأرصدة كل شهر",
+ "90 Smart picks scans a month": "90 فحصاً بـ Smart picks شهرياً", "180 Smart picks scans a month": "180 فحصاً بـ Smart picks شهرياً",
+ "360 Smart picks scans a month": "360 فحصاً بـ Smart picks شهرياً", "Download Peaklip": "نزّل Peaklip",
+ "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Yearly plans are paid once a year, about 15% less than paying monthly, with credits and Smart picks scans still refilled every month; they have no free trial. Prices in US dollars; taxes are added where required. Payments are handled by Creem.":
+   "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. تُدفع الخطط السنوية مرة واحدة في السنة، بأقل بنحو 15% من الدفع الشهري، مع تجديد الأرصدة وعمليات فحص Smart picks كل شهر كالمعتاد؛ ولا تتضمن تجربة مجانية. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات.",
  "For starters.": "للمبتدئين.", "For creators who post every day, across all their platforms.": "لصنّاع المحتوى الذين ينشرون كل يوم على كل منصاتهم.",
  "For clippers and teams turning out clips at volume.": "لمحترفي القص والفرق التي تصنع مقاطع بكميات كبيرة.",
  "/ month": "/ شهرياً", " credits a month": " رصيد شهرياً", "Every feature included": "كل المزايا مشمولة", "Free trial to start": "تجربة مجانية للبدء",

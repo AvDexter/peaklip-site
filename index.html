@@ -13,7 +13,7 @@
   <meta property="og:description" content="Find the peak. Post the clip. Long videos in, ready-to-post Shorts, Reels and TikToks out.">
   <meta property="og:url" content="https://peaklip.com/">
   <link rel="preload" href="assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=6">
+  <link rel="stylesheet" href="assets/style.css?v=8">
   <link rel="alternate" hreflang="en" href="https://peaklip.com/">
   <link rel="alternate" hreflang="ar" href="https://peaklip.com/ar/">
 </head>
@@ -143,48 +143,60 @@
         <h2>Simple plans. One credit per clip.</h2>
         <p>Every clip costs one credit — 15, 30 or 60 seconds. Pick the plan that matches how much you post.</p>
       </div>
-      <div class="plans">
+      <div class="billing reveal">
+        <div class="bill-toggle" role="group" aria-label="Billing period">
+          <button type="button" class="bill-opt" data-bill="month" aria-pressed="true">Monthly</button>
+          <button type="button" class="bill-opt" data-bill="year" aria-pressed="false">Yearly<span class="save-chip">Save 15%</span></button>
+        </div>
+      </div>
+      <div class="plans" data-bill="month">
         <article class="plan panel reveal glow-card">
           <h3>Starter</h3>
           <p class="plan-desc">For starters.</p>
-          <p class="price"><span class="amt">$15</span><span class="per">/ month</span></p>
+          <p class="price"><span class="amt m">$19</span><span class="amt y">$194</span><span class="per m">/ month</span><span class="per y">/ year</span></p>
+          <p class="price-sub"><span class="m">Billed monthly</span><span class="y">About <b>$16.17</b> a month · save 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="120">120</span> credits a month</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Up to 120 clips a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>90 Smart picks scans a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Every feature included</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Credits refill every month</li>
           </ul>
-          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">Start free trial</a>
+          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">Start free trial</span><span class="y">Download Peaklip</span></a>
         </article>
         <article class="plan panel reveal glow-card plan-featured">
-          <span class="plan-badge">Recommended</span><h3>Creator</h3>
+          <span class="plan-badge">Most popular</span><h3>Creator</h3>
           <p class="plan-desc">For creators who post every day, across all their platforms.</p>
-          <p class="price"><span class="amt">$30</span><span class="per">/ month</span></p>
+          <p class="price"><span class="amt m">$39</span><span class="amt y">$398</span><span class="per m">/ month</span><span class="per y">/ year</span></p>
+          <p class="price-sub"><span class="m">Billed monthly</span><span class="y">About <b>$33.17</b> a month · save 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="300">300</span> credits a month</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Up to 300 clips a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>180 Smart picks scans a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Every feature included</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Credits refill every month</li>
           </ul>
-          <a class="btn btn-primary plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">Start free trial</a>
+          <a class="btn btn-primary plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">Start free trial</span><span class="y">Download Peaklip</span></a>
         </article>
         <article class="plan panel reveal glow-card">
           <h3>Pro</h3>
           <p class="plan-desc">For clippers and teams turning out clips at volume.</p>
-          <p class="price"><span class="amt">$60</span><span class="per">/ month</span></p>
+          <p class="price"><span class="amt m">$69</span><span class="amt y">$704</span><span class="per m">/ month</span><span class="per y">/ year</span></p>
+          <p class="price-sub"><span class="m">Billed monthly</span><span class="y">About <b>$58.67</b> a month · save 15%</span></p>
           <p class="plan-credits"><span class="n" data-to="750">750</span> credits a month</p>
           <ul class="checks">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Up to 750 clips a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>360 Smart picks scans a month</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Every feature included</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>3-day free trial · 10 clips</li>
+            <li class="y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Credits refill every month</li>
           </ul>
-          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe">Start free trial</a>
+          <a class="btn btn-quiet plan-btn" href="https://github.com/AvDexter/peaklip-site/releases/latest/download/PeaklipSetup.exe"><span class="m">Start free trial</span><span class="y">Download Peaklip</span></a>
         </article>
       </div>
-      <p class="plans-note reveal">Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Creem. <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a></p>
+      <p class="plans-note reveal">Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Yearly plans are paid once a year, about 15% less than paying monthly, with credits and Smart picks scans still refilled every month; they have no free trial. Prices in US dollars; taxes are added where required. Payments are handled by Creem. <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a></p>
     </div>
   </section>
 
@@ -229,6 +241,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=5" defer></script>
+<script src="assets/site.js?v=6" defer></script>
 </body>
 </html>

@@ -20,10 +20,13 @@
     when: "التاريخ", change: "التغيير", balance: "الرصيد", what: "التفاصيل",
     del: "حذف الحساب نهائياً", delType: "اكتب DELETE للتأكيد.", delPass: "أدخل كلمة مرورك.",
     deleted: "حُذف حسابك. شكراً لتجربتك Peaklip.", signout: "تسجيل الخروج", hello: "مرحباً، ",
-    opening: "جارٍ فتح صفحة الدفع…",
+    opening: "جارٍ فتح صفحة الدفع…", perYear: "/سنوياً", monthly: "شهري", yearly: "سنوي", save: "وفّر 15%",
+    popular: "الأكثر شيوعاً", aboutMonth: function (m) { return "حوالي $" + m + " شهرياً · وفّر 15%"; },
+    billedMonthly: "تُدفع شهرياً", yearlyNote: "تُدفع الخطط السنوية مرة في السنة وتتجدد أرصدتك كل شهر كالمعتاد.",
     notes: {"Free trial started": "بدأت التجربة المجانية", "Plan renewed": "تجددت الخطة",
             "Subscription ended": "انتهى الاشتراك", "Clip made": "صُنع مقطع",
-            "Clip failed — credit returned": "فشل مقطع — أُعيد الرصيد", "Credits from Peaklip": "رصيد من Peaklip"}
+            "Clip failed — credit returned": "فشل مقطع — أُعيد الرصيد", "Credits from Peaklip": "رصيد من Peaklip",
+            "Monthly credits (yearly plan)": "رصيد الشهر (خطة سنوية)"}
   } : {
     signin: "Sign in", signingIn: "One moment…", email: "Email", password: "Password",
     needBoth: "Enter your email and password.", offline: "Couldn't reach the Peaklip server. Try again in a minute.",
@@ -38,9 +41,15 @@
     when: "Date", change: "Change", balance: "Balance", what: "Details",
     del: "Delete my account for good", delType: "Type DELETE to confirm.", delPass: "Enter your password.",
     deleted: "Your account has been deleted. Thanks for trying Peaklip.", signout: "Sign out", hello: "Hi, ",
-    opening: "Opening the payment page…", notes: {}
+    opening: "Opening the payment page…", perYear: "/year", monthly: "Monthly", yearly: "Yearly",
+    save: "Save 15%", popular: "Most popular", aboutMonth: function (m) { return "About $" + m + " a month · save 15%"; },
+    billedMonthly: "Billed monthly", yearlyNote: "Yearly plans are paid once a year and still refill your credits every month.",
+    notes: {}
   };
-  var PLANS = [["starter", "Starter", 15, 120], ["creator", "Creator", 30, 300], ["pro", "Pro", 60, 750]];
+  // [id, name, $ a month, credits a month, $ a year, about $ a month when paid yearly]
+  var PLANS = [["starter", "Starter", 19, 120, 194, "16.17"], ["creator", "Creator", 39, 300, 398, "33.17"],
+               ["pro", "Pro", 69, 750, 704, "58.67"]];
+  var bill = "month";
   var LIVE = ["trialing", "active", "past_due"];
 
   function $(id) { return document.getElementById(id); }
@@ -143,19 +152,47 @@
     buy.hidden = live || u.unlimited;
     if (!buy.hidden) {
       var grid = $("plans");
+      var yearly = !!u.yearly_ready;
+      if (!yearly) { bill = "month"; }
+      var old = $("bill-switch");
+      if (old) { old.parentNode.removeChild(old); }
+      if (yearly) {
+        var wrap = el("div", null, "billing");
+        wrap.id = "bill-switch";
+        var tg = el("div", null, "bill-toggle");
+        tg.setAttribute("role", "group");
+        [["month", T.monthly], ["year", T.yearly]].forEach(function (o) {
+          var btn = el("button", o[1], "bill-opt");
+          btn.type = "button";
+          btn.setAttribute("aria-pressed", String(bill === o[0]));
+          if (o[0] === "year") { btn.appendChild(el("span", T.save, "save-chip")); }
+          btn.onclick = function () { bill = o[0]; render(u); };
+          tg.appendChild(btn);
+        });
+        wrap.appendChild(tg);
+        grid.parentNode.insertBefore(wrap, grid);
+      }
       grid.innerHTML = "";
       PLANS.forEach(function (p) {
-        var card = el("article", null, "plan panel");
+        var featured = p[0] === "creator";
+        var card = el("article", null, "plan panel" + (featured ? " plan-featured" : ""));
+        if (featured) { card.appendChild(el("span", T.popular, "plan-badge")); }
         card.appendChild(el("h3", p[1]));
         var price = el("p", null, "price");
-        price.appendChild(el("span", "$" + p[2], "amt"));
-        price.appendChild(el("span", T.perMonth, "per"));
+        price.appendChild(el("span", "$" + (bill === "year" ? p[4] : p[2]), "amt"));
+        price.appendChild(el("span", bill === "year" ? T.perYear : T.perMonth, "per"));
         card.appendChild(price);
+        var sub = el("p", bill === "year" ? T.aboutMonth(p[5]) : T.billedMonthly, "price-sub");
+        if (bill === "year") { sub.style.color = "#3DD68C"; }
+        card.appendChild(sub);
         card.appendChild(el("p", p[3] + T.creditsMonth, "plan-credits"));
-        var b = el("button", T.buy + p[1], "btn btn-primary plan-btn");
+        var b = el("button", T.buy + p[1], "btn " + (featured ? "btn-primary" : "btn-quiet") + " plan-btn");
         b.type = "button";
         b.style.marginTop = "var(--space-4)";
-        b.onclick = function () { openUrl("/billing/checkout", { plan: p[0] }, b); };
+        var chosen = bill;
+        b.onclick = function () {
+          openUrl("/billing/checkout", chosen === "year" ? { plan: p[0], interval: "year" } : { plan: p[0] }, b);
+        };
         card.appendChild(b);
         grid.appendChild(card);
       });
