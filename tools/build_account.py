@@ -25,7 +25,7 @@ EN = {
     "del_h": "Delete my account",
     "del_p": "This cancels your subscription straight away (no further charges) and erases your account, credits and history from Peaklip's server. It can't be undone. Videos and clips on your PC aren't touched.",
     "del_pass": "Your password", "del_confirm": "Type DELETE to confirm", "del_btn": "Delete my account for good",
-    "foot": '<a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="acceptable-use.html">Acceptable use</a><a href="account.html">Account</a><a href="https://discord.gg/PnNMcYfnwa" rel="noopener">Discord</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a>',
+    "foot": '<a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="acceptable-use.html">Acceptable use</a><a href="account.html">Account</a><a href="https://discord.gg/Rjr3MgVNMT" rel="noopener">Discord</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a>',
 }
 AR = {
     "lang": 'lang="ar" dir="rtl"', "base": "../", "self": "ar/account.html", "other": "../account.html",
@@ -46,7 +46,7 @@ AR = {
     "del_h": "حذف حسابي",
     "del_p": "يلغي هذا اشتراكك فوراً (بلا أي رسوم أخرى) ويمحو حسابك ورصيدك وسجلك من خادم Peaklip. لا يمكن التراجع عنه. لا تُمسّ الفيديوهات والمقاطع على حاسوبك.",
     "del_pass": "كلمة مرورك", "del_confirm": "اكتب DELETE للتأكيد", "del_btn": "احذف حسابي نهائياً",
-    "foot": '<a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="refunds.html">الاسترداد</a><a href="acceptable-use.html">الاستخدام المقبول</a><a href="account.html">حسابي</a><a href="https://discord.gg/PnNMcYfnwa" rel="noopener">ديسكورد</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a>',
+    "foot": '<a href="privacy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="refunds.html">الاسترداد</a><a href="acceptable-use.html">الاستخدام المقبول</a><a href="account.html">حسابي</a><a href="https://discord.gg/Rjr3MgVNMT" rel="noopener">ديسكورد</a><a href="mailto:hello@peaklip.com">hello@peaklip.com</a>',
 }
 
 PAGE = """<!doctype html>
