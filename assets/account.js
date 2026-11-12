@@ -26,7 +26,17 @@
     notes: {"Free trial started": "بدأت التجربة المجانية", "Plan renewed": "تجددت الخطة",
             "Subscription ended": "انتهى الاشتراك", "Clip made": "صُنع مقطع",
             "Clip failed — credit returned": "فشل مقطع — أُعيد الرصيد", "Credits from Peaklip": "رصيد من Peaklip",
-            "Monthly credits (yearly plan)": "رصيد الشهر (خطة سنوية)"}
+            "Monthly credits (yearly plan)": "رصيد الشهر (خطة سنوية)", "Plan upgraded": "رُقّيت الخطة"},
+    switchH: "تغيير الخطة", yourPlan: "خطتك", upgrade: "ترقية إلى ", downgrade: "التحويل إلى ", keep: "الإبقاء على ",
+    startsNext: "تبدأ في ", switchesTo: function (n, d) { return "تتحول إلى " + n + (d ? " في " + d : ""); },
+    switchNote: "الترقية تبدأ فوراً: تحصل على رصيد الخطة الجديدة الآن وتدفع الفرق عن بقية الفترة الحالية. التخفيض يبدأ عند انتهاء فترتك الحالية.",
+    trialSwitch: "يمكنك تغيير الخطة بعد انتهاء التجربة المجانية.",
+    upAsk: function (n, c, pr) { return "تبدأ خطة " + n + " الآن ويصبح رصيدك " + c + " فوراً. يحاسبك Creem على الفرق عن بقية الفترة الحالية، وبعدها " + pr + "."; },
+    downAsk: function (cur, d, n, pr, c) { return "تحتفظ بخطة " + cur + " ورصيدك حتى " + d + ". بعدها تصبح " + n + " بسعر " + pr + " مع " + c + " رصيد شهرياً."; },
+    upgraded: function (n) { return "أصبحت على خطة " + n + "."; },
+    downSet: function (n, d) { return "ستتحول إلى " + n + (d ? " في " + d : "") + "."; },
+    kept: function (n) { return "ستبقى على خطة " + n + "."; },
+    periodEnd: "نهاية الفترة الحالية"
   } : {
     signin: "Sign in", signingIn: "One moment…", email: "Email", password: "Password",
     needBoth: "Enter your email and password.", offline: "Couldn't reach the Peaklip server. Try again in a minute.",
@@ -44,7 +54,17 @@
     opening: "Opening the payment page…", perYear: "/year", monthly: "Monthly", yearly: "Yearly",
     save: "Save 15%", popular: "Most popular", aboutMonth: function (m) { return "About $" + m + " a month · save 15%"; },
     billedMonthly: "Billed monthly", yearlyNote: "Yearly plans are paid once a year and still refill your credits every month.",
-    notes: {}
+    notes: {},
+    switchH: "Change plan", yourPlan: "Your plan", upgrade: "Upgrade to ", downgrade: "Switch to ", keep: "Keep ",
+    startsNext: "Starts ", switchesTo: function (n, d) { return "Switches to " + n + (d ? " on " + d : ""); },
+    switchNote: "Upgrading starts straight away: you get the new plan's credits now and pay the difference for the rest of this period. Downgrading starts when your current period ends.",
+    trialSwitch: "You can switch plans once your free trial has ended.",
+    upAsk: function (n, c, pr) { return n + " starts now and your credits go up to " + c + " straight away. Creem charges your card the difference for the rest of this period; after that it's " + pr + "."; },
+    downAsk: function (cur, d, n, pr, c) { return "You keep " + cur + " and your credits until " + d + ". From then it's " + n + " at " + pr + " with " + c + " credits a month."; },
+    upgraded: function (n) { return "You're on " + n + " now."; },
+    downSet: function (n, d) { return "You'll switch to " + n + (d ? " on " + d : "") + "."; },
+    kept: function (n) { return "You'll stay on " + n + "."; },
+    periodEnd: "the end of this period"
   };
   // [id, name, $ a month, credits a month, $ a year, about $ a month when paid yearly]
   var PLANS = [["starter", "Starter", 19, 120, 194, "16.17"], ["creator", "Creator", 39, 300, 398, "33.17"],
@@ -124,6 +144,7 @@
     if (live || u.status === "canceled") { parts.push((u.plan_name || "") + " · " + (T[u.status] || u.status)); } else { parts.push(T.noPlan); }
     if (live && u.cancels_at) { parts.push(T.cancels + date(u.cancels_at)); }
     else if (live && u.period_ends_at) { parts.push((u.status === "trialing" ? T.trialEnds : T.renews) + date(u.period_ends_at)); }
+    if (live && u.pending_plan && !u.cancels_at) { parts.push(T.switchesTo(u.pending_plan_name || u.pending_plan, date(u.period_ends_at))); }
     $("plan-line").textContent = parts.join(" · ");
 
     var actions = $("sub-actions");
@@ -149,10 +170,16 @@
     }
 
     var buy = $("buy");
-    buy.hidden = live || u.unlimited;
+    var switching = live && !!u.can_change_plan && !u.unlimited;
+    buy.hidden = (live && !switching) || u.unlimited;
+    var head = buy.querySelector("h2"), foot = buy.querySelector("p.updated");
+    if (!buy.dataset.h) { buy.dataset.h = head.textContent; buy.dataset.note = foot.textContent; }
+    head.textContent = switching ? T.switchH : buy.dataset.h;
+    foot.textContent = switching ? T.switchNote : buy.dataset.note;
+    if (switching) { bill = u.interval === "year" ? "year" : "month"; }
     if (!buy.hidden) {
       var grid = $("plans");
-      var yearly = !!u.yearly_ready;
+      var yearly = !!u.yearly_ready && !switching;
       if (!yearly) { bill = "month"; }
       var old = $("bill-switch");
       if (old) { old.parentNode.removeChild(old); }
@@ -190,9 +217,18 @@
         b.type = "button";
         b.style.marginTop = "var(--space-4)";
         var chosen = bill;
-        b.onclick = function () {
-          openUrl("/billing/checkout", chosen === "year" ? { plan: p[0], interval: "year" } : { plan: p[0] }, b);
-        };
+        if (switching) {
+          var kind = switchKind(u, p[0]);
+          b.textContent = kind === "current" ? T.yourPlan : kind === "keep" ? T.keep + p[1]
+            : kind === "next" ? T.startsNext + date(u.period_ends_at) : (kind === "up" ? T.upgrade : T.downgrade) + p[1];
+          b.className = "btn " + (kind === "up" || kind === "keep" ? "btn-primary" : "btn-quiet") + " plan-btn";
+          b.disabled = kind === "current" || kind === "next";
+          b.onclick = function () { switchPlan(u, p, kind, b); };
+        } else {
+          b.onclick = function () {
+            openUrl("/billing/checkout", chosen === "year" ? { plan: p[0], interval: "year" } : { plan: p[0] }, b);
+          };
+        }
         card.appendChild(b);
         grid.appendChild(card);
       });
@@ -209,6 +245,30 @@
       tr.appendChild(el("td", T.notes[h.note] || h.note || ""));
       body.appendChild(tr);
     });
+  }
+
+  function switchKind(u, id) {
+    var order = PLANS.map(function (p) { return p[0]; });
+    if (id === u.plan) { return u.pending_plan ? "keep" : "current"; }
+    if (id === u.pending_plan) { return "next"; }
+    if (order.indexOf(u.plan) < 0) { return "current"; }
+    return order.indexOf(id) > order.indexOf(u.plan) ? "up" : "down";
+  }
+
+  function switchPlan(u, p, kind, btn) {
+    var yearly = u.interval === "year";
+    var price = "$" + (yearly ? p[4] + T.perYear : p[2] + T.perMonth);
+    var cur = u.plan_name || "";
+    if (kind === "up" && !window.confirm(T.upAsk(p[1], p[3], price))) { return; }
+    if (kind === "down" && !window.confirm(T.downAsk(cur, u.period_ends_at ? date(u.period_ends_at) : T.periodEnd, p[1], price, p[3]))) { return; }
+    btn.disabled = true;
+    call("POST", "/billing/change-plan", { plan: p[0] }).then(function (nu) {
+      render(nu);
+      var msg = nu.result === "upgraded" ? T.upgraded(p[1]) : nu.result === "downgrade scheduled"
+        ? T.downSet(p[1], date(nu.period_ends_at)) : T.kept(p[1]);
+      say($("acct-msg"), msg, true);
+      setTimeout(load, 8000);
+    }).catch(function (e) { btn.disabled = false; say($("acct-msg"), e.message); });
   }
 
   function openUrl(path, body, btn) {

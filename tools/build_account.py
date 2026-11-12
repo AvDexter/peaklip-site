@@ -84,7 +84,7 @@ PAGE = """<!doctype html>
     @media (max-width: 760px) {{ .account .plans {{ grid-template-columns: 1fr; }} }}
     details.danger summary {{ cursor: pointer; color: #FF7A7A; font-weight: 600; }}
   </style>
-  <script src="{base}assets/account.js?v=3" defer></script>
+  <script src="{base}assets/account.js?v=4" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">{skip}</a>
