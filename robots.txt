@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /account.html
+Disallow: /ar/account.html
+Disallow: /thanks.html
+
+Sitemap: https://peaklip.com/sitemap.xml

@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 AR = {
  # head / chrome
+ "Peaklip: Find the peak. Post the clip. Shorts, Reels and TikToks from your streams.": "Peaklip: اعثر على الذروة. انشر المقطع. Shorts و Reels و TikTok من بثوثك.",
+ "summary_large_image": "summary_large_image", "Peaklip": "Peaklip", "@peaklipapp": "@peaklipapp",
  "Peaklip — Shorts, Reels and TikToks from your streams": "Peaklip — Shorts و Reels و TikTok من بثوثك",
  "Peaklip turns long streams and gaming videos into ready-to-post Shorts, Reels and TikToks. It finds the best moments, frames webcam and gameplay, adds animated captions and waits for your OK. Video editing software for Windows; your videos stay on your PC.":
    "يحوّل Peaklip البثوث الطويلة وفيديوهات الألعاب إلى Shorts و Reels و TikTok جاهزة للنشر. يجد أفضل اللحظات، ويؤطّر الكاميرا واللعب، ويضيف ترجمة متحركة، وينتظر موافقتك. برنامج تحرير فيديو لـ Windows، وفيديوهاتك تبقى على حاسوبك.",
@@ -149,6 +151,7 @@ def localize(html: str, page: str) -> str:
     html = html.replace('<div class="wave-box">', '<div class="wave-box" dir="ltr">')   # a timeline runs left to right
     html = re.sub(r'(href|src)="(?!https?:|mailto:|#|\.\./)(assets/[^"]*|favicon\.svg)"', r'\1="../\2"', html)
     html = html.replace('href="./"', 'href="./"').replace('href="./#', 'href="./#')
+    html = html.replace('assets/og-en.jpg', 'assets/og-ar.jpg')
     for tag in (f'<link rel="canonical" href="https://peaklip.com/{page}">', f'<meta property="og:url" content="https://peaklip.com/{page}">'):
         html = html.replace(tag, tag.replace("peaklip.com/", "peaklip.com/ar/"))
     html = re.sub(r'<a class="lang"[^>]*>.*?</a>\n\s*', "", html)
