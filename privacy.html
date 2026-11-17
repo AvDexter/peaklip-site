@@ -25,7 +25,7 @@
 <main id="main" class="wrap">
   <article class="legal">
     <h1>Privacy</h1>
-    <p class="updated">Last updated: 16 November 2026</p>
+    <p class="updated">Last updated: 17 November 2026</p>
 
     <p>Peaklip is a Windows app that turns your videos into short clips. It's built so that your videos never leave your
       PC unless <strong>you</strong> choose to post a clip. This page explains exactly what we store and why.</p>
@@ -35,7 +35,8 @@
       <li><strong>Your videos and clips stay on your PC.</strong> Transcription, moment detection and editing run locally. We never receive your footage.</li>
       <li><strong>Smart picks</strong> (on by default, can be switched off) sends a few small still frames and the words said in each candidate moment to be judged by an AI model. Never the video, and nothing is kept.</li>
       <li><strong>Your Peaklip account</strong> stores your name, email address and sign-in details on our server.</li>
-      <li><strong>Your YouTube and Instagram connections</strong> are stored only on your PC, in Windows Credential Manager. We never see them.</li>
+      <li><strong>Your YouTube, Instagram and TikTok connections</strong> are stored only on your PC, in Windows Credential Manager. Your YouTube connection never reaches our server; Instagram and TikTok sign-ins pass through it once to be completed and are never stored there.</li>
+      <li><strong>Everything is protected</strong> with encrypted connections, hashed passwords and strictly limited access (<a href="#security">how we protect your data</a>).</li>
       <li><strong>Scan</strong> looks up public YouTube video statistics through YouTube API Services; it doesn't use your YouTube account.</li>
       <li><strong>This website</strong> sets no cookies and loads no trackers unless you click “Accept” on its cookie banner. Then Meta’s Pixel measures which of our ads brought you here (<a href="#cookies">details</a>). Your account page never uses them.</li>
     </ul>
@@ -59,17 +60,23 @@
       platforms you connect are stored on your own computer. Peaklip's analysis (speech recognition and moment ranking)
       runs on your PC too.</p>
 
-    <h2>Posting to YouTube and Instagram</h2>
-    <p>When you connect YouTube or Instagram, you sign in on the platform's own page and Peaklip receives an access key
-      that is saved in Windows Credential Manager on your PC. When you post a clip, it is uploaded <strong>directly from
+    <h2>Posting to YouTube, Instagram and TikTok</h2>
+    <p>When you connect YouTube, Instagram or TikTok, you sign in on the platform's own page and Peaklip receives an access key
+      that is saved in Windows Credential Manager on your PC. For Instagram and TikTok, the last step of signing in
+      needs Peaklip's secret app key, so it runs on our server: the server swaps the platform's one-time code for the
+      access key and hands it to the app, keeping it only in memory (for at most 15 minutes, until the app collects
+      it) and never in our database. TikTok access keys are renewed the same way. When you post a clip, it is uploaded <strong>directly from
       your PC</strong> to that platform. Peaklip only uses this access to upload the clips you approve and to show which
       account is connected — never to read, change or delete anything else. You can disconnect at any time in the app,
       and revoke access in your <a href="https://myaccount.google.com/permissions" rel="noopener">Google account</a> or
-      Meta settings.</p>
+      Meta or TikTok settings.</p>
     <p>Peaklip's use of information received from Google APIs adheres to the
       <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
       including the Limited Use requirements.</p>
-    <p>TikTok isn't connected at all: Peaklip prepares the clip and caption, and you post it yourself on TikTok.</p>
+    <p>For TikTok, Peaklip reads only your TikTok name and the posting options TikTok allows for your account, and posts
+      each clip with the settings you choose in the publish window (who can see it, comments, duet and stitch, and the
+      commercial-content disclosure). If you haven't connected TikTok, Peaklip prepares the clip and caption and you
+      post it yourself.</p>
 
     <h2 id="google-data">Google user data (YouTube)</h2>
     <p>When you connect YouTube, Peaklip reads only your channel's name and ID, to show which channel is connected, and
@@ -80,6 +87,27 @@
       in Peaklip deletes the access key from your PC at once; the channel name stays only in your local publishing
       history on your PC until you delete Peaklip's data folder or uninstall Peaklip and remove its data. You can also
       revoke Peaklip's access at any time in your <a href="https://myaccount.google.com/permissions" rel="noopener">Google account</a>.</p>
+
+    <h2 id="security">How we protect your data</h2>
+    <ul>
+      <li><strong>Encrypted connections.</strong> Every connection Peaklip makes — between the app and our server, and
+        between your PC and Google, Meta or TikTok — is encrypted with HTTPS (TLS). Peaklip never sends your
+        account details or sign-ins unencrypted.</li>
+      <li><strong>Google user data stays on your PC.</strong> Your YouTube access key is kept in Windows Credential
+        Manager, which encrypts it with your Windows account (the Windows Data Protection API), so other users of the
+        PC can't read it. It is never sent to Peaklip's servers.</li>
+      <li><strong>As little as possible on our server.</strong> We store only what's listed in “What our server
+        stores”. Passwords are kept only as scrypt hashes, and sign-in sessions and email codes only as hashes, so
+        nobody — including us — can read them. Repeated sign-in and code attempts are limited to stop guessing.</li>
+      <li><strong>Strictly limited access.</strong> Only the people who run Peaklip can reach the server, its database
+        and the admin tools, and every account used to run Peaklip (hosting, code, website domain, email and Google)
+        is protected with two-step verification. Secret keys are kept in the server's protected settings, never in
+        Peaklip's code.</li>
+      <li><strong>Backups.</strong> The account database is backed up every night to private storage with the same
+        limited access, and each backup is deleted after 30 days.</li>
+      <li><strong>If something goes wrong.</strong> If we learn of a security incident that affects your data, we'll
+        tell you by email without undue delay, and tell the authorities where the law requires it.</li>
+    </ul>
 
     <h2>Smart picks</h2>
     <p>To find the moments worth clipping, Peaklip first measures your video on your PC. With Smart picks on, it then
