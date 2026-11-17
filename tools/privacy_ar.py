@@ -84,7 +84,9 @@ PRIVACY_AR = """<!doctype html>
       للإعلانات، ولا تُستخدم أبداً لتطوير نماذج الذكاء الاصطناعي أو التعلم الآلي أو تحسينها أو تدريبها (ميزة الاختيارات الذكية
       لا تتلقى أي بيانات من YouTube). النقر على <strong>قطع الاتصال</strong> في Peaklip يحذف مفتاح الوصول من حاسوبك فوراً؛ ويبقى اسم القناة فقط
       في سجل النشر المحلي على حاسوبك حتى تحذف مجلد بيانات Peaklip أو تزيل Peaklip وبياناته. ويمكنك أيضاً إلغاء وصول
-      Peaklip في أي وقت من <a href="https://myaccount.google.com/permissions" rel="noopener">حساب Google</a>.</p>
+      Peaklip في أي وقت من <a href="https://myaccount.google.com/permissions" rel="noopener">حساب Google</a>.
+      ولا نحتفظ بأي بيانات من بيانات مستخدمي Google على خوادمنا، فلا يوجد منها ما نحتفظ به أو نحذفه هناك. وللمساعدة في إزالتها من
+      حاسوبك، أو لأي سؤال عنها، راسلنا على <a href="mailto:hello@peaklip.com">hello@peaklip.com</a>.</p>
 
     <h2 id="security">كيف نحمي بياناتك</h2>
     <ul>
