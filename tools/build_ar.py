@@ -97,6 +97,9 @@ AR = {
  "Can I clip anyone's videos?": "هل يمكنني قص فيديوهات أي شخص؟",
  "Only videos you own or have the creator's permission to clip and post. Peaklip works with video files on your PC and doesn't download anything from YouTube or other sites. To clip your own uploads, download them from YouTube Studio first.":
    "فقط الفيديوهات التي تملكها أو لديك إذن صاحبها بقصّها ونشرها. يعمل Peaklip على ملفات الفيديو الموجودة على حاسوبك ولا ينزّل أي شيء من YouTube أو مواقع أخرى. لقص مقاطعك المرفوعة، نزّلها أولاً من YouTube Studio.",
+ "Why does Peaklip ask for access to my YouTube account?": "لماذا يطلب Peaklip الوصول إلى حسابي في YouTube؟",
+ "Only to post the Shorts you approve. When you connect YouTube, Peaklip asks Google for permission to upload videos to your channel and to read your channel's name, so it can show which channel is connected. It never reads, changes or deletes anything else, and your YouTube access stays on your PC. See ": "فقط لنشر مقاطع Shorts التي توافق عليها. عند ربط YouTube، يطلب Peaklip من Google إذناً برفع الفيديوهات إلى قناتك وقراءة اسم قناتك، ليُظهر القناة المرتبطة. ولا يقرأ أو يغيّر أو يحذف أي شيء آخر أبداً، ويبقى وصولك إلى YouTube على حاسوبك. اطّلع على ",
+ "how Peaklip handles Google user data": "كيف يتعامل Peaklip مع بيانات مستخدمي Google",
  "Does it post automatically?": "هل ينشر تلقائياً؟",
  "No. You approve every clip and its text first. YouTube Shorts and Instagram Reels can be posted from the app; for TikTok, Peaklip gets everything ready and you post it with one paste.":
    "لا. توافق أولاً على كل مقطع ونصه. يمكن النشر على YouTube Shorts و Instagram Reels من التطبيق؛ أما TikTok فيجهّز Peaklip كل شيء وتنشره أنت بلصقة واحدة.",
