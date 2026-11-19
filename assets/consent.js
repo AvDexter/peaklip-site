@@ -11,9 +11,11 @@
   var ar = document.documentElement.lang === "ar";
   var T = ar ? {
     text: "نستخدم ملف تعريف ارتباط من Meta لنعرف أي إعلاناتنا أوصلتك إلى هنا. لا يُحمَّل شيء ما لم توافق.",
+    short: "ملف ارتباط من Meta لقياس إعلاناتنا، فقط إن وافقت.",
     more: "التفاصيل", yes: "موافق", no: "رفض", settings: "إعدادات ملفات تعريف الارتباط", privacy: "privacy.html"
   } : {
     text: "We use a Meta cookie to see which of our ads brought you here. Nothing loads unless you accept.",
+    short: "A Meta cookie to measure our ads, only if you accept.",
     more: "Details", yes: "Accept", no: "Decline", settings: "Cookie settings", privacy: "privacy.html"
   };
 
@@ -51,7 +53,9 @@
     bar.setAttribute("role", "dialog");
     bar.setAttribute("aria-label", T.settings);
     var p = document.createElement("p");
-    p.textContent = T.text + " ";
+    // phones get the short line so the bar stays slim (the full text is on the Details page)
+    var narrow = window.matchMedia && window.matchMedia("(max-width: 600px)").matches;
+    p.textContent = (narrow ? T.short : T.text) + " ";
     var link = document.createElement("a");
     link.href = T.privacy + "#cookies";
     link.textContent = T.more;

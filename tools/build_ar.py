@@ -27,7 +27,7 @@ AR = {
  "Download for Windows ": "تنزيل لـ Windows ", "Download for Windows": "تنزيل لـ Windows", "Download": "تنزيل", "Coming soon": "قريباً", "3-day free trial · 10 clips": "تجربة مجانية 3 أيام · 10 مقاطع", "Start free trial": "ابدأ التجربة المجانية", "Terms": "الشروط", "Refunds": "الاسترداد", "Start your free trial in the app: 3 days, 10 clips, card required — cancel before it ends and you pay nothing. Prices in US dollars; taxes are added where required. Payments are handled by Creem.": "ابدأ تجربتك المجانية من التطبيق: 3 أيام و10 مقاطع، وتلزم بطاقة دفع — ألغِ قبل انتهائها ولن تدفع شيئاً. الأسعار بالدولار الأمريكي، وتُضاف الضرائب حيث يلزم. يتولى Creem المدفوعات.", "See how it works": "شاهد كيف يعمل",
  "Windows 10 &amp; 11 · Your videos stay on your PC": "Windows 10 و 11 · فيديوهاتك تبقى على حاسوبك",
  "Windows 10 &amp; 11 · 3-day free trial · Your videos stay on your PC": "Windows 10 و 11 · تجربة مجانية 3 أيام · فيديوهاتك تبقى على حاسوبك",
- "Peaklip runs on Windows 10 &amp; 11. Get the download link by email and install it on your PC.": "يعمل Peaklip على Windows 10 و 11. احصل على رابط التنزيل بالبريد وثبّته على حاسوبك.",
+ "On your phone? Peaklip runs on Windows PCs. We'll email you the download link for when you're at your PC.": "على هاتفك؟ يعمل Peaklip على حواسيب Windows. سنرسل لك رابط التنزيل بالبريد لتثبّته حين تكون أمام حاسوبك.",
  "Your email": "بريدك الإلكتروني", "Email me the link": "أرسل لي الرابط",
  "He jumped off the bridge": "قفز من فوق الجسر",
  # peak story
